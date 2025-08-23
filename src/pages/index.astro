@@ -4,13 +4,13 @@ import "../styles/globals.css";
 <div class="min-h-screen bg-[var(--color-primary)]">
   <!-- Hero Section -->
   <section class="relative h-screen flex items-center justify-center overflow-hidden">
-    <div class="text-center z-10 max-w-4xl mx-auto px-6">
-      <!-- Squirrel Mascot -->
-      <div class="mb-8">
+    <div class="text-center z-10 max-w-6xl mx-auto px-6">
+      <!-- Large Prominent Squirrel Mascot -->
+      <div class="mb-12">
         <img 
           src="/squirrel_wave.png" 
           alt="Friendly squirrel mascot waving hello" 
-          class="w-32 h-32 mx-auto mb-4 hover:scale-110 transition-transform duration-300"
+          class="w-48 h-48 md:w-64 md:h-64 mx-auto mb-6 hover:scale-110 transition-transform duration-300 drop-shadow-2xl"
         />
       </div>
       
@@ -28,34 +28,75 @@ import "../styles/globals.css";
 
   <!-- About Section -->
   <section class="py-20 bg-[var(--color-dark)]">
-    <div class="max-w-4xl mx-auto px-6 text-center">
-      <div class="flex justify-center mb-6">
-        <img 
-          src="/squirrel_think.png" 
-          alt="Thoughtful squirrel mascot" 
-          class="w-24 h-24 hover:rotate-12 transition-transform duration-300"
-        />
+    <div class="max-w-6xl mx-auto px-6">
+      <!-- Mobile: Centered layout -->
+      <div class="block md:hidden text-center">
+        <div class="flex justify-center mb-8">
+          <img 
+            src="/squirrel_think.png" 
+            alt="Thoughtful squirrel mascot" 
+            class="w-32 h-32 hover:rotate-12 transition-transform duration-300 drop-shadow-xl"
+          />
+        </div>
+        <h2 class="text-4xl font-bold mb-8 text-[var(--color-highlight)]">About Me</h2>
+        <p class="text-lg mb-8 text-[var(--color-accent)] leading-relaxed">
+          I'm a software engineer who believes the best code comes from experiencing the world. 
+          From building applications in Bangkok coffee shops to diving in the Andaman Sea, 
+          every adventure teaches me something new about problem-solving and life.
+        </p>
+        
+        <!-- Simple Stats -->
+        <div class="grid grid-cols-1 gap-6 mt-12">
+          <div class="bg-[var(--color-primary)] p-6 rounded-lg">
+            <h3 class="text-2xl font-bold mb-2 text-[var(--color-highlight)]">5+ Years</h3>
+            <p class="text-[var(--color-accent)]">Building Software</p>
+          </div>
+          <div class="bg-[var(--color-primary)] p-6 rounded-lg">
+            <h3 class="text-2xl font-bold mb-2 text-[var(--color-highlight)]">20+ Countries</h3>
+            <p class="text-[var(--color-accent)]">Remote Work</p>
+          </div>
+          <div class="bg-[var(--color-primary)] p-6 rounded-lg">
+            <h3 class="text-2xl font-bold mb-2 text-[var(--color-highlight)]">∞ Curiosity</h3>
+            <p class="text-[var(--color-accent)]">Always Learning</p>
+          </div>
+        </div>
       </div>
-      <h2 class="text-4xl font-bold mb-8 text-[var(--color-highlight)]">About Me</h2>
-      <p class="text-lg mb-8 text-[var(--color-accent)] leading-relaxed">
-        I'm a software engineer who believes the best code comes from experiencing the world. 
-        From building applications in Bangkok coffee shops to diving in the Andaman Sea, 
-        every adventure teaches me something new about problem-solving and life.
-      </p>
-      
-      <!-- Simple Stats -->
-      <div class="grid md:grid-cols-3 gap-6 mt-12">
-        <div class="bg-[var(--color-primary)] p-6 rounded-lg">
-          <h3 class="text-2xl font-bold mb-2 text-[var(--color-highlight)]">5+ Years</h3>
-          <p class="text-[var(--color-accent)]">Building Software</p>
+
+      <!-- Desktop: Left squirrel layout -->
+      <div class="hidden md:flex items-center gap-12">
+        <!-- Left: Squirrel -->
+        <div class="flex-shrink-0">
+          <img 
+            src="/squirrel_think.png" 
+            alt="Thoughtful squirrel mascot" 
+            class="w-48 h-48 lg:w-56 lg:h-56 hover:rotate-12 transition-transform duration-300 drop-shadow-xl"
+          />
         </div>
-        <div class="bg-[var(--color-primary)] p-6 rounded-lg">
-          <h3 class="text-2xl font-bold mb-2 text-[var(--color-highlight)]">20+ Countries</h3>
-          <p class="text-[var(--color-accent)]">Remote Work</p>
-        </div>
-        <div class="bg-[var(--color-primary)] p-6 rounded-lg">
-          <h3 class="text-2xl font-bold mb-2 text-[var(--color-highlight)]">∞ Curiosity</h3>
-          <p class="text-[var(--color-accent)]">Always Learning</p>
+        
+        <!-- Right: Content -->
+        <div class="flex-1">
+          <h2 class="text-4xl lg:text-5xl font-bold mb-8 text-[var(--color-highlight)]">About Me</h2>
+          <p class="text-lg lg:text-xl mb-8 text-[var(--color-accent)] leading-relaxed">
+            I'm a software engineer who believes the best code comes from experiencing the world. 
+            From building applications in Bangkok coffee shops to diving in the Andaman Sea, 
+            every adventure teaches me something new about problem-solving and life.
+          </p>
+          
+          <!-- Simple Stats -->
+          <div class="grid grid-cols-3 gap-6">
+            <div class="bg-[var(--color-primary)] p-6 rounded-lg text-center">
+              <h3 class="text-2xl font-bold mb-2 text-[var(--color-highlight)]">5+ Years</h3>
+              <p class="text-[var(--color-accent)]">Building Software</p>
+            </div>
+            <div class="bg-[var(--color-primary)] p-6 rounded-lg text-center">
+              <h3 class="text-2xl font-bold mb-2 text-[var(--color-highlight)]">20+ Countries</h3>
+              <p class="text-[var(--color-accent)]">Remote Work</p>
+            </div>
+            <div class="bg-[var(--color-primary)] p-6 rounded-lg text-center">
+              <h3 class="text-2xl font-bold mb-2 text-[var(--color-highlight)]">∞ Curiosity</h3>
+              <p class="text-[var(--color-accent)]">Always Learning</p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -63,45 +104,97 @@ import "../styles/globals.css";
 
   <!-- Skills Section -->
   <section class="py-20 bg-[var(--color-primary)]">
-    <div class="max-w-4xl mx-auto px-6 text-center">
-      <div class="flex justify-center mb-6">
-        <img 
-          src="/squirrel_starry_eyes.png" 
-          alt="Excited squirrel mascot with starry eyes" 
-          class="w-24 h-24 hover:bounce transition-transform duration-300"
-        />
+    <div class="max-w-6xl mx-auto px-6">
+      <!-- Mobile: Centered layout -->
+      <div class="block md:hidden text-center">
+        <div class="flex justify-center mb-8">
+          <img 
+            src="/squirrel_starry_eyes.png" 
+            alt="Excited squirrel mascot with starry eyes" 
+            class="w-32 h-32 hover:bounce transition-transform duration-300 drop-shadow-xl"
+          />
+        </div>
+        <h2 class="text-4xl font-bold mb-8 text-[var(--color-highlight)]">What I Build With</h2>
+        
+        <div class="grid grid-cols-1 gap-6">
+          <div class="bg-[var(--color-dark)] p-6 rounded-lg">
+            <h3 class="text-xl font-bold mb-4 text-[var(--color-highlight)]">Frontend</h3>
+            <div class="space-y-2 text-[var(--color-accent)]">
+              <p>React & Next.js</p>
+              <p>Vue.js</p>
+              <p>TypeScript</p>
+              <p>Tailwind CSS</p>
+            </div>
+          </div>
+
+          <div class="bg-[var(--color-dark)] p-6 rounded-lg">
+            <h3 class="text-xl font-bold mb-4 text-[var(--color-highlight)]">Backend</h3>
+            <div class="space-y-2 text-[var(--color-accent)]">
+              <p>Node.js & Express</p>
+              <p>Python & Django</p>
+              <p>PostgreSQL</p>
+              <p>MongoDB</p>
+            </div>
+          </div>
+
+          <div class="bg-[var(--color-dark)] p-6 rounded-lg">
+            <h3 class="text-xl font-bold mb-4 text-[var(--color-highlight)]">DevOps</h3>
+            <div class="space-y-2 text-[var(--color-accent)]">
+              <p>AWS & Docker</p>
+              <p>CI/CD Pipelines</p>
+              <p>Kubernetes</p>
+              <p>Infrastructure as Code</p>
+            </div>
+          </div>
+        </div>
       </div>
-      <h2 class="text-4xl font-bold mb-8 text-[var(--color-highlight)]">What I Build With</h2>
-      
-      <div class="grid md:grid-cols-3 gap-8">
-        <div class="bg-[var(--color-dark)] p-6 rounded-lg">
-          <h3 class="text-xl font-bold mb-4 text-[var(--color-highlight)]">Frontend</h3>
-          <div class="space-y-2 text-[var(--color-accent)]">
-            <p>React & Next.js</p>
-            <p>Vue.js</p>
-            <p>TypeScript</p>
-            <p>Tailwind CSS</p>
+
+      <!-- Desktop: Right squirrel layout -->
+      <div class="hidden md:flex items-center gap-12">
+        <!-- Left: Content -->
+        <div class="flex-1">
+          <h2 class="text-4xl lg:text-5xl font-bold mb-8 text-[var(--color-highlight)]">What I Build With</h2>
+          
+          <div class="grid grid-cols-3 gap-6">
+            <div class="bg-[var(--color-dark)] p-6 rounded-lg text-center">
+              <h3 class="text-xl font-bold mb-4 text-[var(--color-highlight)]">Frontend</h3>
+              <div class="space-y-2 text-[var(--color-accent)]">
+                <p>React & Next.js</p>
+                <p>Vue.js</p>
+                <p>TypeScript</p>
+                <p>Tailwind CSS</p>
+              </div>
+            </div>
+
+            <div class="bg-[var(--color-dark)] p-6 rounded-lg text-center">
+              <h3 class="text-xl font-bold mb-4 text-[var(--color-highlight)]">Backend</h3>
+              <div class="space-y-2 text-[var(--color-accent)]">
+                <p>Node.js & Express</p>
+                <p>Python & Django</p>
+                <p>PostgreSQL</p>
+                <p>MongoDB</p>
+              </div>
+            </div>
+
+            <div class="bg-[var(--color-dark)] p-6 rounded-lg text-center">
+              <h3 class="text-xl font-bold mb-4 text-[var(--color-highlight)]">DevOps</h3>
+              <div class="space-y-2 text-[var(--color-accent)]">
+                <p>AWS & Docker</p>
+                <p>CI/CD Pipelines</p>
+                <p>Kubernetes</p>
+                <p>Infrastructure as Code</p>
+              </div>
+            </div>
           </div>
         </div>
-
-        <div class="bg-[var(--color-dark)] p-6 rounded-lg">
-          <h3 class="text-xl font-bold mb-4 text-[var(--color-highlight)]">Backend</h3>
-          <div class="space-y-2 text-[var(--color-accent)]">
-            <p>Node.js & Express</p>
-            <p>Python & Django</p>
-            <p>PostgreSQL</p>
-            <p>MongoDB</p>
-          </div>
-        </div>
-
-        <div class="bg-[var(--color-dark)] p-6 rounded-lg">
-          <h3 class="text-xl font-bold mb-4 text-[var(--color-highlight)]">DevOps</h3>
-          <div class="space-y-2 text-[var(--color-accent)]">
-            <p>AWS & Docker</p>
-            <p>CI/CD Pipelines</p>
-            <p>Kubernetes</p>
-            <p>Infrastructure as Code</p>
-          </div>
+        
+        <!-- Right: Squirrel -->
+        <div class="flex-shrink-0">
+          <img 
+            src="/squirrel_starry_eyes.png" 
+            alt="Excited squirrel mascot with starry eyes" 
+            class="w-48 h-48 lg:w-56 lg:h-56 hover:bounce transition-transform duration-300 drop-shadow-xl"
+          />
         </div>
       </div>
     </div>
@@ -109,35 +202,77 @@ import "../styles/globals.css";
 
   <!-- Adventures Section -->
   <section class="py-20 bg-[var(--color-dark)]">
-    <div class="max-w-4xl mx-auto px-6 text-center">
-      <div class="flex justify-center mb-6">
-        <img 
-          src="/squirrel_bow.png" 
-          alt="Polite squirrel mascot taking a bow" 
-          class="w-24 h-24 hover:scale-110 transition-transform duration-300"
-        />
+    <div class="max-w-6xl mx-auto px-6">
+      <!-- Mobile: Centered layout -->
+      <div class="block md:hidden text-center">
+        <div class="flex justify-center mb-8">
+          <img 
+            src="/squirrel_bow.png" 
+            alt="Polite squirrel mascot taking a bow" 
+            class="w-32 h-32 hover:scale-110 transition-transform duration-300 drop-shadow-xl"
+          />
+        </div>
+        <h2 class="text-4xl font-bold mb-8 text-[var(--color-highlight)]">Adventures & Inspirations</h2>
+        <p class="text-lg mb-12 text-[var(--color-accent)] leading-relaxed">
+          Every place I visit teaches me something new. Whether it's the discipline of Muay Thai in Thailand, 
+          the craftsmanship of Japanese temples, or the patience learned while diving in crystal-clear waters.
+        </p>
+        
+        <div class="grid grid-cols-1 gap-6">
+          <div class="bg-[var(--color-primary)] p-8 rounded-lg">
+            <div class="text-4xl mb-4">🌏</div>
+            <h3 class="text-xl font-bold mb-4 text-[var(--color-highlight)]">Digital Nomad Life</h3>
+            <p class="text-[var(--color-accent)]">
+              Working from Bangkok coffee shops, Tokyo co-working spaces, and beachside cafes across Southeast Asia.
+            </p>
+          </div>
+          
+          <div class="bg-[var(--color-primary)] p-8 rounded-lg">
+            <div class="text-4xl mb-4">🥊</div>
+            <h3 class="text-xl font-bold mb-4 text-[var(--color-highlight)]">Continuous Learning</h3>
+            <p class="text-[var(--color-accent)]">
+              From Muay Thai training to scuba diving, always pushing boundaries and embracing new challenges.
+            </p>
+          </div>
+        </div>
       </div>
-      <h2 class="text-4xl font-bold mb-8 text-[var(--color-highlight)]">Adventures & Inspirations</h2>
-      <p class="text-lg mb-12 text-[var(--color-accent)] leading-relaxed">
-        Every place I visit teaches me something new. Whether it's the discipline of Muay Thai in Thailand, 
-        the craftsmanship of Japanese temples, or the patience learned while diving in crystal-clear waters.
-      </p>
-      
-      <div class="grid md:grid-cols-2 gap-8">
-        <div class="bg-[var(--color-primary)] p-8 rounded-lg">
-          <div class="text-4xl mb-4">🌏</div>
-          <h3 class="text-xl font-bold mb-4 text-[var(--color-highlight)]">Digital Nomad Life</h3>
-          <p class="text-[var(--color-accent)]">
-            Working from Bangkok coffee shops, Tokyo co-working spaces, and beachside cafes across Southeast Asia.
-          </p>
+
+      <!-- Desktop: Left squirrel layout -->
+      <div class="hidden md:flex items-center gap-12">
+        <!-- Left: Squirrel -->
+        <div class="flex-shrink-0">
+          <img 
+            src="/squirrel_bow.png" 
+            alt="Polite squirrel mascot taking a bow" 
+            class="w-48 h-48 lg:w-56 lg:h-56 hover:scale-110 transition-transform duration-300 drop-shadow-xl"
+          />
         </div>
         
-        <div class="bg-[var(--color-primary)] p-8 rounded-lg">
-          <div class="text-4xl mb-4">🥊</div>
-          <h3 class="text-xl font-bold mb-4 text-[var(--color-highlight)]">Continuous Learning</h3>
-          <p class="text-[var(--color-accent)]">
-            From Muay Thai training to scuba diving, always pushing boundaries and embracing new challenges.
+        <!-- Right: Content -->
+        <div class="flex-1">
+          <h2 class="text-4xl lg:text-5xl font-bold mb-8 text-[var(--color-highlight)]">Adventures & Inspirations</h2>
+          <p class="text-lg lg:text-xl mb-12 text-[var(--color-accent)] leading-relaxed">
+            Every place I visit teaches me something new. Whether it's the discipline of Muay Thai in Thailand, 
+            the craftsmanship of Japanese temples, or the patience learned while diving in crystal-clear waters.
           </p>
+          
+          <div class="grid grid-cols-2 gap-8">
+            <div class="bg-[var(--color-primary)] p-8 rounded-lg text-center">
+              <div class="text-4xl mb-4">🌏</div>
+              <h3 class="text-xl font-bold mb-4 text-[var(--color-highlight)]">Digital Nomad Life</h3>
+              <p class="text-[var(--color-accent)]">
+                Working from Bangkok coffee shops, Tokyo co-working spaces, and beachside cafes across Southeast Asia.
+              </p>
+            </div>
+            
+            <div class="bg-[var(--color-primary)] p-8 rounded-lg text-center">
+              <div class="text-4xl mb-4">🥊</div>
+              <h3 class="text-xl font-bold mb-4 text-[var(--color-highlight)]">Continuous Learning</h3>
+              <p class="text-[var(--color-accent)]">
+                From Muay Thai training to scuba diving, always pushing boundaries and embracing new challenges.
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -145,37 +280,69 @@ import "../styles/globals.css";
 
   <!-- Contact Section -->
   <section class="py-20 bg-[var(--color-primary)]">
-    <div class="max-w-4xl mx-auto px-6 text-center">
-      <div class="flex justify-center mb-6">
-        <img 
-          src="/squirrel_one_arm_wave.png" 
-          alt="Friendly squirrel mascot waving" 
-          class="w-24 h-24 hover:scale-110 transition-transform duration-300"
-        />
+    <div class="max-w-6xl mx-auto px-6">
+      <!-- Mobile: Centered layout -->
+      <div class="block md:hidden text-center">
+        <div class="flex justify-center mb-8">
+          <img 
+            src="/squirrel_one_arm_wave.png" 
+            alt="Friendly squirrel mascot waving" 
+            class="w-32 h-32 hover:scale-110 transition-transform duration-300 drop-shadow-xl"
+          />
+        </div>
+        <h2 class="text-4xl font-bold mb-8 text-[var(--color-highlight)]">Let's Build Something Together!</h2>
+        <p class="text-xl mb-8 text-[var(--color-accent)] leading-relaxed">
+          Got an idea? Need a reliable developer who understands both code and culture? 
+          Let's chat about bringing your vision to life.
+        </p>
+        <div class="flex flex-col gap-4">
+          <button class="px-8 py-4 bg-[var(--color-highlight)] text-[var(--color-dark)] rounded-lg font-bold text-lg hover:bg-[var(--color-secondary)] transition-colors hover:scale-105 transform duration-200">
+            Get In Touch
+          </button>
+          <button class="px-8 py-4 border-2 border-[var(--color-accent)] text-[var(--color-accent)] rounded-lg font-bold text-lg hover:bg-[var(--color-accent)] hover:text-[var(--color-dark)] transition-colors hover:scale-105 transform duration-200">
+            See My Work
+          </button>
+        </div>
       </div>
-      <h2 class="text-4xl font-bold mb-8 text-[var(--color-highlight)]">Let's Build Something Together!</h2>
-      <p class="text-xl mb-8 text-[var(--color-accent)] leading-relaxed">
-        Got an idea? Need a reliable developer who understands both code and culture? 
-        Let's chat about bringing your vision to life.
-      </p>
-      <div class="flex flex-wrap justify-center gap-4">
-        <button class="px-8 py-4 bg-[var(--color-highlight)] text-[var(--color-dark)] rounded-lg font-bold text-lg hover:bg-[var(--color-secondary)] transition-colors hover:scale-105 transform duration-200">
-          Get In Touch
-        </button>
-        <button class="px-8 py-4 border-2 border-[var(--color-accent)] text-[var(--color-accent)] rounded-lg font-bold text-lg hover:bg-[var(--color-accent)] hover:text-[var(--color-dark)] transition-colors hover:scale-105 transform duration-200">
-          See My Work
-        </button>
+
+      <!-- Desktop: Right squirrel layout -->
+      <div class="hidden md:flex items-center gap-12">
+        <!-- Left: Content -->
+        <div class="flex-1">
+          <h2 class="text-4xl lg:text-5xl font-bold mb-8 text-[var(--color-highlight)]">Let's Build Something Together!</h2>
+          <p class="text-xl lg:text-2xl mb-8 text-[var(--color-accent)] leading-relaxed">
+            Got an idea? Need a reliable developer who understands both code and culture? 
+            Let's chat about bringing your vision to life.
+          </p>
+          <div class="flex flex-wrap gap-4">
+            <button class="px-8 py-4 bg-[var(--color-highlight)] text-[var(--color-dark)] rounded-lg font-bold text-lg hover:bg-[var(--color-secondary)] transition-colors hover:scale-105 transform duration-200">
+              Get In Touch
+            </button>
+            <button class="px-8 py-4 border-2 border-[var(--color-accent)] text-[var(--color-accent)] rounded-lg font-bold text-lg hover:bg-[var(--color-accent)] hover:text-[var(--color-dark)] transition-colors hover:scale-105 transform duration-200">
+              See My Work
+            </button>
+          </div>
+        </div>
+        
+        <!-- Right: Squirrel -->
+        <div class="flex-shrink-0">
+          <img 
+            src="/squirrel_one_arm_wave.png" 
+            alt="Friendly squirrel mascot waving" 
+            class="w-48 h-48 lg:w-56 lg:h-56 hover:scale-110 transition-transform duration-300 drop-shadow-xl"
+          />
+        </div>
       </div>
     </div>
   </section>
 
   <!-- Footer -->
   <footer class="py-12 bg-[var(--color-dark)] text-center">
-    <div class="flex justify-center mb-4">
+    <div class="flex justify-center mb-6">
       <img 
         src="/squirrel_think.png" 
         alt="Thoughtful squirrel mascot" 
-        class="w-16 h-16 opacity-70"
+        class="w-20 h-20 md:w-24 md:h-24 opacity-80 hover:opacity-100 transition-opacity duration-300"
       />
     </div>
     <p class="text-[var(--color-secondary)]">
