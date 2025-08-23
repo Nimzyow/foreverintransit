@@ -462,68 +462,63 @@ import "../styles/globals.css";
         </div>
       </div>
 
-      <!-- Desktop: Right squirrel layout -->
-      <div class="hidden md:flex items-center gap-12">
-        <!-- Left: Content -->
-        <div class="flex-1">
-          <h2 class="text-4xl lg:text-5xl font-bold mb-8 text-[var(--color-highlight)]">Adventures & Inspirations</h2>
-          <p class="text-lg lg:text-xl mb-12 text-[var(--color-accent)] leading-relaxed">
-            Every place I visit teaches me something new. Whether it's the discipline of Muay Thai in Thailand, 
-            the craftsmanship of Japanese temples, or the patience learned while diving in crystal-clear waters.
-          </p>
-          
-          <div class="grid grid-cols-1 gap-6">
-            <div class="bg-[var(--color-primary)] p-6 rounded-lg text-center">
-              <div class="flex justify-center mb-4">
-                <img 
-                  src="/squirrel_japan.png" 
-                  alt="Squirrel in Japanese style" 
-                  class="w-20 h-20"
-                />
-              </div>
-              <h3 class="text-xl font-bold mb-4 text-[var(--color-highlight)]">Japan Experience</h3>
-              <p class="text-[var(--color-accent)]">
-                Immersed in Tokyo's tech scene, visited Kyoto's temples, and learned from Japanese craftsmanship and precision.
-              </p>
-            </div>
+      <!-- Desktop: Alternating left/right squirrel layout -->
+      <div class="hidden md:block">
+        <h2 class="text-4xl lg:text-5xl font-bold mb-8 text-[var(--color-highlight)] text-center">Adventures & Inspirations</h2>
+        <p class="text-lg lg:text-xl mb-12 text-[var(--color-accent)] leading-relaxed text-center max-w-4xl mx-auto">
+          Every place I visit teaches me something new. Whether it's the discipline of Muay Thai in Thailand, 
+          the craftsmanship of Japanese temples, or the patience learned while diving in crystal-clear waters.
+        </p>
+        
+        <!-- Japan Experience - Squirrel on Left -->
+        <div class="flex items-center gap-8 mb-12">
+          <div class="flex-shrink-0">
+            <img 
+              src="/squirrel_japan.png" 
+              alt="Squirrel in Japanese style" 
+              class="w-32 h-32 lg:w-40 lg:h-40 hover:scale-110 transition-transform duration-300 drop-shadow-xl"
+            />
+          </div>
+          <div class="flex-1">
+            <h3 class="text-2xl lg:text-3xl font-bold mb-4 text-[var(--color-highlight)]">Japan Experience</h3>
+            <p class="text-lg lg:text-xl text-[var(--color-accent)] leading-relaxed">
+              Immersed in Tokyo's tech scene, visited Kyoto's temples, and learned from Japanese craftsmanship and precision.
+            </p>
+          </div>
+        </div>
 
-            <div class="bg-[var(--color-primary)] p-6 rounded-lg text-center">
-              <div class="flex justify-center mb-4">
-                <img 
-                  src="/squirrel_muay_thai.png" 
-                  alt="Squirrel practicing Muay Thai" 
-                  class="w-20 h-20"
-                />
-              </div>
-              <h3 class="text-xl font-bold mb-4 text-[var(--color-highlight)]">Muay Thai Training</h3>
-              <p class="text-[var(--color-accent)]">
-                Trained in authentic Thai gyms in Bangkok, learning discipline, focus, and the art of continuous improvement.
-              </p>
-            </div>
-            
-            <div class="bg-[var(--color-primary)] p-6 rounded-lg text-center">
-              <div class="flex justify-center mb-4">
-                <img 
-                  src="/squirrel_scuba.png" 
-                  alt="Squirrel scuba diving" 
-                  class="w-20 h-20"
-                />
-              </div>
-              <h3 class="text-xl font-bold mb-4 text-[var(--color-highlight)]">Scuba Diving</h3>
-              <p class="text-[var(--color-accent)]">
-                Explored coral reefs in the Andaman Sea, discovering the importance of precision, patience, and underwater wonder.
-              </p>
-            </div>
+        <!-- Muay Thai Training - Squirrel on Right -->
+        <div class="flex items-center gap-8 mb-12 flex-row-reverse">
+          <div class="flex-shrink-0">
+            <img 
+              src="/squirrel_muay_thai.png" 
+              alt="Squirrel practicing Muay Thai" 
+              class="w-32 h-32 lg:w-40 lg:h-40 hover:scale-110 transition-transform duration-300 drop-shadow-xl"
+            />
+          </div>
+          <div class="flex-1">
+            <h3 class="text-2xl lg:text-3xl font-bold mb-4 text-[var(--color-highlight)]">Muay Thai Training</h3>
+            <p class="text-lg lg:text-xl text-[var(--color-accent)] leading-relaxed">
+              Trained in authentic Thai gyms in Bangkok, learning discipline, focus, and the art of continuous improvement.
+            </p>
           </div>
         </div>
         
-        <!-- Right: Squirrel -->
-        <div class="flex-shrink-0">
-          <img 
-            src="/squirrel_japan.png" 
-            alt="Squirrel mascot in Japanese style" 
-            class="w-48 h-48 lg:w-56 lg:h-56 hover:scale-110 transition-transform duration-300 drop-shadow-xl"
-          />
+        <!-- Scuba Diving - Squirrel on Left -->
+        <div class="flex items-center gap-8">
+          <div class="flex-shrink-0">
+            <img 
+              src="/squirrel_scuba.png" 
+              alt="Squirrel scuba diving" 
+              class="w-32 h-32 lg:w-40 lg:h-40 hover:scale-110 transition-transform duration-300 drop-shadow-xl"
+            />
+          </div>
+          <div class="flex-1">
+            <h3 class="text-xl lg:text-3xl font-bold mb-4 text-[var(--color-highlight)]">Scuba Diving</h3>
+            <p class="text-lg lg:text-xl text-[var(--color-accent)] leading-relaxed">
+              Explored coral reefs in the Andaman Sea, discovering the importance of precision, patience, and underwater wonder.
+            </p>
+          </div>
         </div>
       </div>
     </div>
