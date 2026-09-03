@@ -7,597 +7,266 @@ import "../styles/globals.css";
     <meta charset="utf-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Nima Soufiani - Software Engineer & Digital Nomad</title>
+    <title>Nima Soufiani — Full-Stack Engineer</title>
+    <meta
+      name="description"
+      content="Full-stack engineer in London. I design and ship products end to end — iOS, web, and the infrastructure underneath."
+    />
   </head>
-  <body>
-    <div class="min-h-screen bg-[var(--color-primary)]">
-  <!-- Hero Section -->
-  <section class="relative h-screen flex items-center justify-center overflow-hidden">
-    <div class="text-center z-10 max-w-6xl mx-auto px-6">
-      <!-- Large Prominent Squirrel Mascot -->
-      <div class="mb-12">
-        <img 
-          src="/squirrel_wave.png" 
-          alt="Friendly squirrel mascot waving hello" 
-          class="w-48 h-48 md:w-64 md:h-64 mx-auto mb-6 hover:scale-110 transition-transform duration-300 drop-shadow-2xl"
-        />
-      </div>
-      
-      <h1 class="text-5xl md:text-7xl font-bold mb-6 text-[var(--color-highlight)]">
-        Nima Soufiani
-      </h1>
-      <p class="text-xl md:text-2xl mb-8 text-[var(--color-accent)]">
-        Software Engineer & Digital Nomad
-      </p>
-      <p class="text-lg text-[var(--color-secondary)] mb-8 max-w-2xl mx-auto">
-        Building software while exploring the world. Always curious, always learning.
-      </p>
-    </div>
-  </section>
+  <body class="bg-[var(--color-dark)] text-[var(--color-accent)]">
+    <main class="max-w-3xl mx-auto px-6">
 
-  <!-- About Section -->
-  <section class="py-20 bg-[var(--color-dark)]">
-    <div class="max-w-6xl mx-auto px-6">
-      <!-- Mobile: Centered layout -->
-      <div class="block md:hidden text-center">
-        <div class="flex justify-center mb-8">
-          <img 
-            src="/squirrel_coding.png" 
-            alt="Squirrel mascot coding at computer" 
-            class="w-32 h-32 hover:rotate-12 transition-transform duration-300 drop-shadow-xl"
-          />
-        </div>
-        <h2 class="text-4xl font-bold mb-8 text-[var(--color-highlight)]">About Me</h2>
-        <p class="text-lg mb-8 text-[var(--color-accent)] leading-relaxed">
-          I'm a software engineer who believes the best code comes from experiencing the world. 
-          From building applications in Bangkok coffee shops to diving in the Andaman Sea, 
-          every adventure teaches me something new about problem-solving and life.
+      <!-- Hero -->
+      <section class="min-h-screen flex flex-col justify-center py-24">
+        <h1 class="text-4xl md:text-6xl font-bold text-[var(--color-accent)] mb-6">
+          Nima Soufiani
+        </h1>
+        <p class="text-xl md:text-2xl text-[var(--color-secondary)] mb-8 max-w-xl">
+          Full-stack engineer in London. I design and ship products end to
+          end — iOS, web, and the infrastructure underneath.
         </p>
-        
-        <!-- Simple Stats -->
-        <div class="grid grid-cols-1 gap-6 mt-12">
-          <div class="bg-[var(--color-primary)] p-6 rounded-lg">
-            <h3 class="text-2xl font-bold mb-2 text-[var(--color-highlight)]">5+ Years</h3>
-            <p class="text-[var(--color-accent)]">Building Software</p>
-          </div>
-          <div class="bg-[var(--color-primary)] p-6 rounded-lg">
-            <h3 class="text-2xl font-bold mb-2 text-[var(--color-highlight)]">20+ Countries</h3>
-            <p class="text-[var(--color-accent)]">Remote Work</p>
-          </div>
-          <div class="bg-[var(--color-primary)] p-6 rounded-lg">
-            <h3 class="text-2xl font-bold mb-2 text-[var(--color-highlight)]">∞ Curiosity</h3>
-            <p class="text-[var(--color-accent)]">Always Learning</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Desktop: Left squirrel layout -->
-      <div class="hidden md:flex items-center gap-12">
-        <!-- Left: Squirrel -->
-        <div class="flex-shrink-0">
-          <img 
-            src="/squirrel_coding.png" 
-            alt="Squirrel mascot coding at computer" 
-            class="w-48 h-48 lg:w-56 lg:h-56 hover:rotate-12 transition-transform duration-300 drop-shadow-xl"
-          />
-        </div>
-        
-        <!-- Right: Content -->
-        <div class="flex-1">
-          <h2 class="text-4xl lg:text-5xl font-bold mb-8 text-[var(--color-highlight)]">About Me</h2>
-          <p class="text-lg lg:text-xl mb-8 text-[var(--color-accent)] leading-relaxed">
-            I'm a software engineer who believes the best code comes from experiencing the world. 
-            From building applications in Bangkok coffee shops to diving in the Andaman Sea, 
-            every adventure teaches me something new about problem-solving and life.
-          </p>
-          
-          <!-- Simple Stats -->
-          <div class="grid grid-cols-3 gap-6">
-            <div class="bg-[var(--color-primary)] p-6 rounded-lg text-center">
-              <h3 class="text-2xl font-bold mb-2 text-[var(--color-highlight)]">5+ Years</h3>
-              <p class="text-[var(--color-accent)]">Building Software</p>
-            </div>
-            <div class="bg-[var(--color-primary)] p-6 rounded-lg text-center">
-              <h3 class="text-2xl font-bold mb-2 text-[var(--color-highlight)]">20+ Countries</h3>
-              <p class="text-[var(--color-accent)]">Remote Work</p>
-            </div>
-            <div class="bg-[var(--color-primary)] p-6 rounded-lg text-center">
-              <h3 class="text-2xl font-bold mb-2 text-[var(--color-highlight)]">∞ Curiosity</h3>
-              <p class="text-[var(--color-accent)]">Always Learning</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Skills Section -->
-  <section class="py-20 bg-[var(--color-primary)]">
-    <div class="max-w-6xl mx-auto px-6">
-      <!-- Mobile: Centered layout -->
-      <div class="block md:hidden text-center">
-        <div class="flex justify-center mb-8">
-          <img 
-            src="/squirrel_starry_eyes.png" 
-            alt="Excited squirrel mascot with starry eyes" 
-            class="w-32 h-32 hover:bounce transition-transform duration-300 drop-shadow-xl"
-          />
-        </div>
-        <h2 class="text-4xl font-bold mb-8 text-[var(--color-highlight)]">What I Can Build For You</h2>
-        
-        <div class="grid grid-cols-1 gap-6">
-          <div class="bg-[var(--color-dark)] p-6 rounded-lg">
-            <div class="text-4xl mb-4 text-center">📱</div>
-            <h3 class="text-xl font-bold mb-4 text-[var(--color-highlight)] text-center">Mobile Apps</h3>
-            <div class="space-y-2 text-[var(--color-accent)] text-center">
-              <p>iPhone & Android apps</p>
-              <p>Apple Watch apps</p>
-              <p>Cross-platform solutions</p>
-            </div>
-          </div>
-
-          <div class="bg-[var(--color-dark)] p-6 rounded-lg">
-            <div class="text-4xl mb-4 text-center">💻</div>
-            <h3 class="text-xl font-bold mb-4 text-[var(--color-highlight)] text-center">Websites & Web Apps</h3>
-            <div class="space-y-2 text-[var(--color-accent)] text-center">
-              <p>Business websites</p>
-              <p>E-commerce stores</p>
-              <p>Interactive web applications</p>
-            </div>
-          </div>
-
-          <div class="bg-[var(--color-dark)] p-6 rounded-lg">
-            <div class="text-4xl mb-4 text-center">🤖</div>
-            <h3 class="text-xl font-bold mb-4 text-[var(--color-highlight)] text-center">Smart Solutions</h3>
-            <div class="space-y-2 text-[var(--color-accent)] text-center">
-              <p>AI-powered recommendations</p>
-              <p>Automated workflows</p>
-              <p>Data analysis tools</p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Desktop: Right squirrel layout -->
-      <div class="hidden md:flex items-center gap-12">
-        <!-- Left: Content -->
-        <div class="flex-1">
-          <h2 class="text-4xl lg:text-5xl font-bold mb-8 text-[var(--color-highlight)]">What I Can Build For You</h2>
-          
-          <div class="grid grid-cols-3 gap-6">
-            <div class="bg-[var(--color-dark)] p-6 rounded-lg text-center">
-              <div class="text-4xl mb-4">📱</div>
-              <h3 class="text-xl font-bold mb-4 text-[var(--color-highlight)]">Mobile Apps</h3>
-              <div class="space-y-2 text-[var(--color-accent)]">
-                <p>iPhone & Android apps</p>
-                <p>Apple Watch apps</p>
-                <p>Cross-platform solutions</p>
-              </div>
-            </div>
-
-            <div class="bg-[var(--color-dark)] p-6 rounded-lg text-center">
-              <div class="text-4xl mb-4">💻</div>
-              <h3 class="text-xl font-bold mb-4 text-[var(--color-highlight)]">Websites & Web Apps</h3>
-              <div class="space-y-2 text-[var(--color-accent)]">
-                <p>Business websites</p>
-                <p>E-commerce stores</p>
-                <p>Interactive web applications</p>
-              </div>
-            </div>
-
-            <div class="bg-[var(--color-dark)] p-6 rounded-lg text-center">
-              <div class="text-4xl mb-4">🤖</div>
-              <h3 class="text-xl font-bold mb-4 text-[var(--color-highlight)]">Smart Solutions</h3>
-              <div class="space-y-2 text-[var(--color-accent)]">
-                <p>AI-powered recommendations</p>
-                <p>Automated workflows</p>
-                <p>Data analysis tools</p>
-              </div>
-            </div>
-          </div>
-        </div>
-        
-        <!-- Right: Squirrel -->
-        <div class="flex-shrink-0">
-          <img 
-            src="/squirrel_starry_eyes.png" 
-            alt="Excited squirrel mascot with starry eyes" 
-            class="w-48 h-48 lg:w-56 lg:h-56 hover:bounce transition-transform duration-300 drop-shadow-xl"
-          />
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Projects Section -->
-  <section class="py-20 bg-[var(--color-dark)]">
-    <div class="max-w-6xl mx-auto px-6">
-      <!-- Mobile: Centered layout -->
-      <div class="block md:hidden text-center">
-        <div class="flex justify-center mb-8">
-          <img 
-            src="/squirrel_coding.png" 
-            alt="Squirrel mascot coding projects" 
-            class="w-32 h-32 hover:scale-110 transition-transform duration-300 drop-shadow-xl"
-          />
-        </div>
-        <h2 class="text-4xl font-bold mb-8 text-[var(--color-highlight)]">Featured Projects</h2>
-        <p class="text-lg mb-12 text-[var(--color-accent)] leading-relaxed">
-          Here are some of the projects I've built, from recommendation engines to diving platforms.
+        <p class="text-lg text-[var(--color-accent)]/80 mb-10 max-w-xl leading-relaxed">
+          Two products in production: a compliance-heavy professional network
+          for corporate boards, and an iOS app live on the App Store.
+          Previously built in green energy and financial services.
         </p>
-        
-        <div class="grid grid-cols-1 gap-6">
-          <!-- Recommends.app -->
-          <div class="bg-[var(--color-primary)] p-6 rounded-lg text-left">
-            <h3 class="text-xl font-bold mb-3 text-[var(--color-highlight)]">Recommends.app</h3>
-            <p class="text-[var(--color-accent)] mb-4">AI-powered recommendation platform for discovering personalized content and products.</p>
-            <div class="flex flex-wrap gap-2">
-              <span class="px-3 py-1 bg-[var(--color-dark)] text-[var(--color-secondary)] rounded-full text-sm">React</span>
-              <span class="px-3 py-1 bg-[var(--color-dark)] text-[var(--color-secondary)] rounded-full text-sm">AI/ML</span>
-              <span class="px-3 py-1 bg-[var(--color-dark)] text-[var(--color-secondary)] rounded-full text-sm">Node.js</span>
-            </div>
-          </div>
-
-          <!-- Annai -->
-          <div class="bg-[var(--color-primary)] p-6 rounded-lg text-left">
-            <h3 class="text-xl font-bold mb-3 text-[var(--color-highlight)]">Annai</h3>
-            <p class="text-[var(--color-accent)] mb-4">Cultural guide and travel companion app for authentic local experiences.</p>
-            <div class="flex flex-wrap gap-2">
-              <span class="px-3 py-1 bg-[var(--color-dark)] text-[var(--color-secondary)] rounded-full text-sm">Vue.js</span>
-              <span class="px-3 py-1 bg-[var(--color-dark)] text-[var(--color-secondary)] rounded-full text-sm">Travel</span>
-              <span class="px-3 py-1 bg-[var(--color-dark)] text-[var(--color-secondary)] rounded-full text-sm">Mobile</span>
-            </div>
-          </div>
-
-          <!-- Scuba'd -->
-          <div class="bg-[var(--color-primary)] p-6 rounded-lg text-left">
-            <div class="flex items-center gap-3 mb-3">
-              <img 
-                src="/squirrel_scuba.png" 
-                alt="Squirrel scuba diving" 
-                class="w-8 h-8"
-              />
-              <h3 class="text-xl font-bold text-[var(--color-highlight)]">Scuba'd</h3>
-            </div>
-            <p class="text-[var(--color-accent)] mb-4">Dive logging and underwater exploration platform for scuba diving enthusiasts.</p>
-            <div class="flex flex-wrap gap-2">
-              <span class="px-3 py-1 bg-[var(--color-dark)] text-[var(--color-secondary)] rounded-full text-sm">Python</span>
-              <span class="px-3 py-1 bg-[var(--color-dark)] text-[var(--color-secondary)] rounded-full text-sm">Django</span>
-              <span class="px-3 py-1 bg-[var(--color-dark)] text-[var(--color-secondary)] rounded-full text-sm">PostgreSQL</span>
-            </div>
-          </div>
-
-          <!-- Olympia -->
-          <div class="bg-[var(--color-primary)] p-6 rounded-lg text-left">
-            <h3 class="text-xl font-bold mb-3 text-[var(--color-highlight)]">Olympia</h3>
-            <p class="text-[var(--color-accent)] mb-4">Fitness tracking and training optimization platform for athletes and fitness enthusiasts.</p>
-            <div class="flex flex-wrap gap-2">
-              <span class="px-3 py-1 bg-[var(--color-dark)] text-[var(--color-secondary)] rounded-full text-sm">React Native</span>
-              <span class="px-3 py-1 bg-[var(--color-dark)] text-[var(--color-secondary)] rounded-full text-sm">Fitness</span>
-              <span class="px-3 py-1 bg-[var(--color-dark)] text-[var(--color-secondary)] rounded-full text-sm">Analytics</span>
-            </div>
-          </div>
-
-          <!-- abbass-ghahremani.com -->
-          <div class="bg-[var(--color-primary)] p-6 rounded-lg text-left">
-            <h3 class="text-xl font-bold mb-3 text-[var(--color-highlight)]">abbass-ghahremani.com</h3>
-            <p class="text-[var(--color-accent)] mb-4">Professional portfolio website showcasing artistic and creative work.</p>
-            <div class="flex flex-wrap gap-2">
-              <span class="px-3 py-1 bg-[var(--color-dark)] text-[var(--color-secondary)] rounded-full text-sm">Astro</span>
-              <span class="px-3 py-1 bg-[var(--color-dark)] text-[var(--color-secondary)] rounded-full text-sm">Portfolio</span>
-              <span class="px-3 py-1 bg-[var(--color-dark)] text-[var(--color-secondary)] rounded-full text-sm">Design</span>
-            </div>
-          </div>
-
-          <!-- sneakynuts.com -->
-          <div class="bg-[var(--color-primary)] p-6 rounded-lg text-left">
-            <h3 class="text-xl font-bold mb-3 text-[var(--color-highlight)]">sneakynuts.com</h3>
-            <p class="text-[var(--color-accent)] mb-4">E-commerce platform for premium nuts and snacks with subscription services.</p>
-            <div class="flex flex-wrap gap-2">
-              <span class="px-3 py-1 bg-[var(--color-dark)] text-[var(--color-secondary)] rounded-full text-sm">Next.js</span>
-              <span class="px-3 py-1 bg-[var(--color-dark)] text-[var(--color-secondary)] rounded-full text-sm">E-commerce</span>
-              <span class="px-3 py-1 bg-[var(--color-dark)] text-[var(--color-secondary)] rounded-full text-sm">Stripe</span>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Desktop: Left squirrel layout -->
-      <div class="hidden md:flex items-start gap-12">
-        <!-- Left: Squirrel -->
-        <div class="flex-shrink-0 pt-8">
-          <img 
-            src="/squirrel_coding.png" 
-            alt="Squirrel mascot coding projects" 
-            class="w-48 h-48 lg:w-56 lg:h-56 hover:scale-110 transition-transform duration-300 drop-shadow-xl"
-          />
-        </div>
-        
-        <!-- Right: Content -->
-        <div class="flex-1">
-          <h2 class="text-4xl lg:text-5xl font-bold mb-8 text-[var(--color-highlight)]">Featured Projects</h2>
-          <p class="text-lg lg:text-xl mb-12 text-[var(--color-accent)] leading-relaxed">
-            Here are some of the projects I've built, from recommendation engines to diving platforms.
-          </p>
-          
-          <div class="grid grid-cols-2 gap-6">
-            <!-- Recommends.app -->
-            <div class="bg-[var(--color-primary)] p-6 rounded-lg">
-              <h3 class="text-xl font-bold mb-3 text-[var(--color-highlight)]">Recommends.app</h3>
-              <p class="text-[var(--color-accent)] mb-4">AI-powered recommendation platform for discovering personalized content and products.</p>
-              <div class="flex flex-wrap gap-2">
-                <span class="px-3 py-1 bg-[var(--color-dark)] text-[var(--color-secondary)] rounded-full text-sm">React</span>
-                <span class="px-3 py-1 bg-[var(--color-dark)] text-[var(--color-secondary)] rounded-full text-sm">AI/ML</span>
-                <span class="px-3 py-1 bg-[var(--color-dark)] text-[var(--color-secondary)] rounded-full text-sm">Node.js</span>
-              </div>
-            </div>
-
-            <!-- Annai -->
-            <div class="bg-[var(--color-primary)] p-6 rounded-lg">
-              <h3 class="text-xl font-bold mb-3 text-[var(--color-highlight)]">Annai</h3>
-              <p class="text-[var(--color-accent)] mb-4">Cultural guide and travel companion app for authentic local experiences.</p>
-              <div class="flex flex-wrap gap-2">
-                <span class="px-3 py-1 bg-[var(--color-dark)] text-[var(--color-secondary)] rounded-full text-sm">Vue.js</span>
-                <span class="px-3 py-1 bg-[var(--color-dark)] text-[var(--color-secondary)] rounded-full text-sm">Travel</span>
-                <span class="px-3 py-1 bg-[var(--color-dark)] text-[var(--color-secondary)] rounded-full text-sm">Mobile</span>
-              </div>
-            </div>
-
-            <!-- Scuba'd -->
-            <div class="bg-[var(--color-primary)] p-6 rounded-lg">
-              <div class="flex items-center gap-3 mb-3">
-                <img 
-                  src="/squirrel_scuba.png" 
-                  alt="Squirrel scuba diving" 
-                  class="w-8 h-8"
-                />
-                <h3 class="text-xl font-bold text-[var(--color-highlight)]">Scuba'd</h3>
-              </div>
-              <p class="text-[var(--color-accent)] mb-4">Dive logging and underwater exploration platform for scuba diving enthusiasts.</p>
-              <div class="flex flex-wrap gap-2">
-                <span class="px-3 py-1 bg-[var(--color-dark)] text-[var(--color-secondary)] rounded-full text-sm">Python</span>
-                <span class="px-3 py-1 bg-[var(--color-dark)] text-[var(--color-secondary)] rounded-full text-sm">Django</span>
-                <span class="px-3 py-1 bg-[var(--color-dark)] text-[var(--color-secondary)] rounded-full text-sm">PostgreSQL</span>
-              </div>
-            </div>
-
-            <!-- Olympia -->
-            <div class="bg-[var(--color-primary)] p-6 rounded-lg">
-              <h3 class="text-xl font-bold mb-3 text-[var(--color-highlight)]">Olympia</h3>
-              <p class="text-[var(--color-accent)] mb-4">Fitness tracking and training optimization platform for athletes and fitness enthusiasts.</p>
-              <div class="flex flex-wrap gap-2">
-                <span class="px-3 py-1 bg-[var(--color-dark)] text-[var(--color-secondary)] rounded-full text-sm">React Native</span>
-                <span class="px-3 py-1 bg-[var(--color-dark)] text-[var(--color-secondary)] rounded-full text-sm">Fitness</span>
-                <span class="px-3 py-1 bg-[var(--color-dark)] text-[var(--color-secondary)] rounded-full text-sm">Analytics</span>
-              </div>
-            </div>
-
-            <!-- abbass-ghahremani.com -->
-            <div class="bg-[var(--color-primary)] p-6 rounded-lg">
-              <h3 class="text-xl font-bold mb-3 text-[var(--color-highlight)]">abbass-ghahremani.com</h3>
-              <p class="text-[var(--color-accent)] mb-4">Professional portfolio website showcasing artistic and creative work.</p>
-              <div class="flex flex-wrap gap-2">
-                <span class="px-3 py-1 bg-[var(--color-dark)] text-[var(--color-secondary)] rounded-full text-sm">Astro</span>
-                <span class="px-3 py-1 bg-[var(--color-dark)] text-[var(--color-secondary)] rounded-full text-sm">Portfolio</span>
-                <span class="px-3 py-1 bg-[var(--color-dark)] text-[var(--color-secondary)] rounded-full text-sm">Design</span>
-              </div>
-            </div>
-
-            <!-- sneakynuts.com -->
-            <div class="bg-[var(--color-primary)] p-6 rounded-lg">
-              <h3 class="text-xl font-bold mb-3 text-[var(--color-highlight)]">sneakynuts.com</h3>
-              <p class="text-[var(--color-accent)] mb-4">E-commerce platform for premium nuts and snacks with subscription services.</p>
-              <div class="flex flex-wrap gap-2">
-                <span class="px-3 py-1 bg-[var(--color-dark)] text-[var(--color-secondary)] rounded-full text-sm">Next.js</span>
-                <span class="px-3 py-1 bg-[var(--color-dark)] text-[var(--color-secondary)] rounded-full text-sm">E-commerce</span>
-                <span class="px-3 py-1 bg-[var(--color-dark)] text-[var(--color-secondary)] rounded-full text-sm">Stripe</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Adventures Section -->
-  <section class="py-20 bg-[var(--color-primary)]">
-    <div class="max-w-6xl mx-auto px-6">
-      <!-- Mobile: Centered layout -->
-      <div class="block md:hidden text-center">
-        <div class="flex justify-center mb-8">
-          <img 
-            src="/squirrel_japan.png" 
-            alt="Squirrel mascot in Japanese style" 
-            class="w-32 h-32 hover:scale-110 transition-transform duration-300 drop-shadow-xl"
-          />
-        </div>
-        <h2 class="text-4xl font-bold mb-8 text-[var(--color-highlight)]">Adventures & Inspirations</h2>
-        <p class="text-lg mb-12 text-[var(--color-accent)] leading-relaxed">
-          Every place I visit teaches me something new. Whether it's the discipline of Muay Thai in Thailand, 
-          the craftsmanship of Japanese temples, or the patience learned while diving in crystal-clear waters.
+        <p class="text-lg font-semibold text-[var(--color-highlight)] mb-10">
+          Available for contract and permanent roles.
         </p>
-        
-        <div class="grid grid-cols-1 gap-6">
-          <div class="bg-[var(--color-dark)] p-8 rounded-lg">
-            <div class="flex justify-center mb-4">
-              <img 
-                src="/squirrel_japan.png" 
-                alt="Squirrel in Japanese style" 
-                class="w-24 h-24"
-              />
-            </div>
-            <h3 class="text-xl font-bold mb-4 text-[var(--color-highlight)]">Japan Experience</h3>
-            <p class="text-[var(--color-accent)]">
-              Immersed in Tokyo's tech scene, visited Kyoto's temples, and learned from Japanese craftsmanship and precision.
-            </p>
-          </div>
-
-          <div class="bg-[var(--color-dark)] p-8 rounded-lg">
-            <div class="flex justify-center mb-4">
-              <img 
-                src="/squirrel_muay_thai.png" 
-                alt="Squirrel practicing Muay Thai" 
-                class="w-24 h-24"
-              />
-            </div>
-            <h3 class="text-xl font-bold mb-4 text-[var(--color-highlight)]">Muay Thai Training</h3>
-            <p class="text-[var(--color-accent)]">
-              Trained in authentic Thai gyms in Bangkok, learning discipline, focus, and the art of continuous improvement.
-            </p>
-          </div>
-          
-          <div class="bg-[var(--color-dark)] p-8 rounded-lg">
-            <div class="flex justify-center mb-4">
-              <img 
-                src="/squirrel_scuba.png" 
-                alt="Squirrel scuba diving" 
-                class="w-24 h-24"
-              />
-            </div>
-            <h3 class="text-xl font-bold mb-4 text-[var(--color-highlight)]">Scuba Diving</h3>
-            <p class="text-[var(--color-accent)]">
-              Explored coral reefs in the Andaman Sea, discovering the importance of precision, patience, and underwater wonder.
-            </p>
-          </div>
+        <div class="flex flex-wrap gap-x-6 gap-y-2 text-[var(--color-secondary)]">
+          <a href="mailto:nimasoufiani@gmail.com" class="hover:text-[var(--color-highlight)] transition-colors underline underline-offset-4">
+            nimasoufiani@gmail.com
+          </a>
+          <a href="https://github.com/Nimzyow" target="_blank" rel="noopener noreferrer" class="hover:text-[var(--color-highlight)] transition-colors underline underline-offset-4">
+            GitHub
+          </a>
+          <a href="https://www.linkedin.com/in/nima-soufiani-555a76198/" target="_blank" rel="noopener noreferrer" class="hover:text-[var(--color-highlight)] transition-colors underline underline-offset-4">
+            LinkedIn
+          </a>
         </div>
-      </div>
+      </section>
 
-      <!-- Desktop: Alternating left/right squirrel layout -->
-      <div class="hidden md:block">
-        <h2 class="text-4xl lg:text-5xl font-bold mb-8 text-[var(--color-highlight)] text-center">Adventures & Inspirations</h2>
-        <p class="text-lg lg:text-xl mb-12 text-[var(--color-accent)] leading-relaxed text-center max-w-4xl mx-auto">
-          Every place I visit teaches me something new. Whether it's the discipline of Muay Thai in Thailand, 
-          the craftsmanship of Japanese temples, or the patience learned while diving in crystal-clear waters.
+      <!-- Case study — Olympo -->
+      <section class="py-20 border-t border-[var(--color-secondary)]/20">
+        <h2 class="text-3xl md:text-4xl font-bold text-[var(--color-accent)] mb-2">
+          Olympo
+        </h2>
+        <p class="text-lg text-[var(--color-highlight)] mb-1">
+          A professional network built for corporate boards, not general careers.
         </p>
-        
-        <!-- Japan Experience - Squirrel on Left -->
-        <div class="flex items-center gap-12 mb-16">
-          <div class="flex-shrink-0">
-            <img 
-              src="/squirrel_japan.png" 
-              alt="Squirrel in Japanese style" 
-              class="w-48 h-48 lg:w-56 lg:h-56 hover:scale-110 transition-transform duration-300 drop-shadow-xl"
-            />
-          </div>
-          <div class="max-w-lg">
-            <h3 class="text-2xl lg:text-3xl font-bold mb-4 text-[var(--color-highlight)]">Japan Experience</h3>
-            <p class="text-lg lg:text-xl text-[var(--color-accent)] leading-relaxed">
-              Immersed in Tokyo's tech scene, visited Kyoto's temples, and learned from Japanese craftsmanship and precision.
-            </p>
-          </div>
-        </div>
-
-        <!-- Muay Thai Training - Squirrel on Right -->
-        <div class="flex items-center gap-12 mb-16 flex-row-reverse">
-          <div class="flex-shrink-0">
-            <img 
-              src="/squirrel_muay_thai.png" 
-              alt="Squirrel practicing Muay Thai" 
-              class="w-48 h-48 lg:w-56 lg:h-56 hover:scale-110 transition-transform duration-300 drop-shadow-xl"
-            />
-          </div>
-          <div class="max-w-lg">
-            <h3 class="text-2xl lg:text-3xl font-bold mb-4 text-[var(--color-highlight)]">Muay Thai Training</h3>
-            <p class="text-lg lg:text-xl text-[var(--color-accent)] leading-relaxed">
-              Trained in authentic Thai gyms in Bangkok, learning discipline, focus, and the art of continuous improvement.
-            </p>
-          </div>
-        </div>
-        
-        <!-- Scuba Diving - Squirrel on Left -->
-        <div class="flex items-center gap-12">
-          <div class="flex-shrink-0">
-            <img 
-              src="/squirrel_scuba.png" 
-              alt="Squirrel scuba diving" 
-              class="w-48 h-48 lg:w-56 lg:h-56 hover:scale-110 transition-transform duration-300 drop-shadow-xl"
-            />
-          </div>
-          <div class="max-w-lg">
-            <h3 class="text-xl lg:text-3xl font-bold mb-4 text-[var(--color-highlight)]">Scuba Diving</h3>
-            <p class="text-lg lg:text-xl text-[var(--color-accent)] leading-relaxed">
-              Explored coral reefs in the Andaman Sea, discovering the importance of precision, patience, and underwater wonder.
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Contact Section -->
-  <section class="py-20 bg-[var(--color-dark)]">
-    <div class="max-w-6xl mx-auto px-6">
-      <!-- Mobile: Centered layout -->
-      <div class="block md:hidden text-center">
-        <div class="flex justify-center mb-8">
-          <img 
-            src="/squirrel_one_arm_wave.png" 
-            alt="Friendly squirrel mascot waving" 
-            class="w-32 h-32 hover:scale-110 transition-transform duration-300 drop-shadow-xl"
-          />
-        </div>
-        <h2 class="text-4xl font-bold mb-8 text-[var(--color-highlight)]">Let's Build Something Together!</h2>
-        <p class="text-xl mb-8 text-[var(--color-accent)] leading-relaxed">
-          Got an idea? Need a reliable developer who understands both code and culture? 
-          Let's chat about bringing your vision to life.
+        <p class="text-sm text-[var(--color-secondary)] mb-8">
+          Co-founded with Eleonora Labita. In production, pre-launch.
         </p>
-        <div class="flex flex-col gap-4">
-          <button class="px-8 py-4 bg-[var(--color-highlight)] text-[var(--color-dark)] rounded-lg font-bold text-lg hover:bg-[var(--color-secondary)] transition-colors hover:scale-105 transform duration-200">
-            Get In Touch
-          </button>
-          <button class="px-8 py-4 border-2 border-[var(--color-accent)] text-[var(--color-accent)] rounded-lg font-bold text-lg hover:bg-[var(--color-accent)] hover:text-[var(--color-dark)] transition-colors hover:scale-105 transform duration-200">
-            See My Work
-          </button>
-        </div>
-      </div>
 
-      <!-- Desktop: Left squirrel layout -->
-      <div class="hidden md:flex items-center gap-12">
-        <!-- Left: Squirrel -->
-        <div class="flex-shrink-0">
-          <img 
-            src="/squirrel_one_arm_wave.png" 
-            alt="Friendly squirrel mascot waving" 
-            class="w-48 h-48 lg:w-56 lg:h-56 hover:scale-110 transition-transform duration-300 drop-shadow-xl"
-          />
-        </div>
-        
-        <!-- Right: Content -->
-        <div class="flex-1">
-          <h2 class="text-4xl lg:text-5xl font-bold mb-8 text-[var(--color-highlight)]">Let's Build Something Together!</h2>
-          <p class="text-xl lg:text-2xl mb-8 text-[var(--color-accent)] leading-relaxed">
-            Got an idea? Need a reliable developer who understands both code and culture? 
-            Let's chat about bringing your vision to life.
-          </p>
-          <div class="flex flex-wrap gap-4">
-            <button class="px-8 py-4 bg-[var(--color-highlight)] text-[var(--color-dark)] rounded-lg font-bold text-lg hover:bg-[var(--color-secondary)] transition-colors hover:scale-105 transform duration-200">
-              Get In Touch
-            </button>
-            <button class="px-8 py-4 border-2 border-[var(--color-accent)] text-[var(--color-accent)] rounded-lg font-bold text-lg hover:bg-[var(--color-accent)] hover:text-[var(--color-dark)] transition-colors hover:scale-105 transform duration-200">
-              See My Work
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+        <h3 class="text-sm uppercase tracking-wide text-[var(--color-secondary)] mb-2">The problem</h3>
+        <p class="text-base leading-relaxed text-[var(--color-accent)]/90 mb-8">
+          Companies need qualified, trustworthy board members. Board-ready
+          professionals need a structured way to find the right seats. But
+          board appointments aren't job applications — they involve sensitive
+          credentials, regulatory obligations, and a level of trust that a
+          listings site can't carry. The product had to be built around
+          verification and governance from the first commit, not bolted on
+          later.
+        </p>
 
-  <!-- Footer -->
-  <footer class="py-12 bg-[var(--color-dark)] text-center">
-    <div class="flex justify-center mb-6">
-      <img 
-        src="/squirrel_think.png" 
-        alt="Thoughtful squirrel mascot" 
-        class="w-20 h-20 md:w-24 md:h-24 opacity-80 hover:opacity-100 transition-opacity duration-300"
-      />
-    </div>
-    <p class="text-[var(--color-secondary)]">
-      © 2024 Nima Soufiani.
-    </p>
-    <p class="text-[var(--color-secondary)]">
-      Built with curiosity, deployed with adventure.
-    </p>
-  </footer>
-    </div>
+        <h3 class="text-sm uppercase tracking-wide text-[var(--color-secondary)] mb-2">What that meant in practice</h3>
+        <ul class="text-base leading-relaxed text-[var(--color-accent)]/90 mb-8 space-y-4 list-disc list-outside pl-5">
+          <li>
+            <span class="font-semibold text-[var(--color-accent)]">Verification</span> runs through a
+            custom admin interface rather than an off-the-shelf KYC vendor —
+            documents move through a <span class="italic">pending → verified</span>
+            state in the database, and nothing is treated as trusted until an
+            admin has reviewed it.
+          </li>
+          <li>
+            <span class="font-semibold text-[var(--color-accent)]">Data model</span> runs on DynamoDB
+            behind a fully serverless stack (SST on AWS), so cost tracks
+            actual usage instead of idle infrastructure — a deliberate choice
+            for a pre-launch product with no users yet.
+          </li>
+          <li>
+            <span class="font-semibold text-[var(--color-accent)]">Sensitive data</span> — CVs,
+            identity documents, board credentials — lives in a private S3
+            bucket with no public access; uploads and admin downloads go
+            through short-lived presigned URLs, and everything is kept in the
+            appropriate EU region to match the compliance rules the product
+            is built around.
+          </li>
+        </ul>
+
+        <h3 class="text-sm uppercase tracking-wide text-[var(--color-secondary)] mb-2">Stack</h3>
+        <p class="text-base leading-relaxed text-[var(--color-accent)]/90 mb-8">
+          SST (Serverless Stack), Next.js, AWS — S3, DynamoDB, Cognito.
+        </p>
+
+        <!-- TODO(nima): what's actually next, and one honest "what I'd do differently" line. -->
+
+        <h3 class="text-sm uppercase tracking-wide text-[var(--color-secondary)] mb-2">Where it stands</h3>
+        <p class="text-base leading-relaxed text-[var(--color-accent)]/90">
+          Deployed to production and feature-complete for launch — no users
+          yet.
+        </p>
+      </section>
+
+      <!-- Case study — Recommends -->
+      <section class="py-20 border-t border-[var(--color-secondary)]/20">
+        <h2 class="text-3xl md:text-4xl font-bold text-[var(--color-accent)] mb-2">
+          Recommends
+        </h2>
+        <p class="text-lg text-[var(--color-highlight)] mb-1">
+          Find the dish, not just the restaurant.
+        </p>
+        <p class="text-sm text-[var(--color-secondary)] mb-8">
+          My own product. Live on the iOS App Store.
+        </p>
+
+        <h3 class="text-sm uppercase tracking-wide text-[var(--color-secondary)] mb-2">The idea</h3>
+        <p class="text-base leading-relaxed text-[var(--color-accent)]/90 mb-8">
+          Restaurant reviews rate the venue. Nobody rates the plate.
+          Recommends is photo-backed, dish-level recommendations from people
+          who actually ate the thing — so you arrive knowing what to order,
+          not just where to go.
+        </p>
+
+        <h3 class="text-sm uppercase tracking-wide text-[var(--color-secondary)] mb-2">What I built</h3>
+        <p class="text-base leading-relaxed text-[var(--color-accent)]/90 mb-4">
+          A native iOS app backed by a Python service — Celery for async
+          ingest, Redis for scheduling, SpatiaLite for geo queries — with
+          Gemini wired in for dish extraction. Two problems drove the
+          architecture:
+        </p>
+        <ul class="text-base leading-relaxed text-[var(--color-accent)]/90 mb-8 space-y-4 list-disc list-outside pl-5">
+          <li>
+            <span class="font-semibold text-[var(--color-accent)]">Canonical dish identity.</span>
+            Menus and posts use messy, inconsistent names, so the system
+            turns photos into per-restaurant dish SKUs: Gemini suggests
+            dishes on upload, Celery later extracts a full inventory, then
+            exact and fuzzy matching (≥0.85 similarity) merges duplicates so
+            votes and photos attach to the dish, not the post — entity
+            resolution plus multimodal AI, so discovery ranks real dishes
+            instead of one-off captions.
+          </li>
+          <li>
+            <span class="font-semibold text-[var(--color-accent)]">Local discovery under SpatiaLite constraints.</span>
+            Nearby ranking combines distance and social signal on SpatiaLite,
+            not PostGIS, so dietary filters can't safely ride inside the same
+            annotated geo query and are matched outside the ORM instead.
+            Location for digests is privacy-throttled by time and distance
+            gates rather than raw GPS on every ping.
+          </li>
+        </ul>
+
+        <h3 class="text-sm uppercase tracking-wide text-[var(--color-secondary)] mb-2">Where it stands</h3>
+        <p class="text-base leading-relaxed text-[var(--color-accent)]/90 mb-8">
+          Shipped through App Store review and live, with real
+          recommendations across London.
+        </p>
+
+        <div class="flex flex-wrap gap-4">
+          <a href="https://apps.apple.com/gb/app/recommends/id6740585961" target="_blank" rel="noopener noreferrer" class="text-[var(--color-secondary)] hover:text-[var(--color-highlight)] transition-colors underline underline-offset-4">
+            App Store →
+          </a>
+          <a href="https://recommends.app" target="_blank" rel="noopener noreferrer" class="text-[var(--color-secondary)] hover:text-[var(--color-highlight)] transition-colors underline underline-offset-4">
+            recommends.app →
+          </a>
+        </div>
+      </section>
+
+      <!-- How I work with AI -->
+      <section class="py-20 border-t border-[var(--color-secondary)]/20">
+        <h2 class="text-3xl md:text-4xl font-bold text-[var(--color-accent)] mb-8">
+          How I work with AI
+        </h2>
+        <p class="text-base leading-relaxed text-[var(--color-accent)]/90 mb-4">
+          I build with AI tooling heavily, which mostly means I move faster on
+          the parts that were never the interesting bit. On Recommends,
+          instead of building OCR, NER, and custom matching by hand, I wired
+          Gemini into a hybrid pipeline — fast menu suggestions on upload,
+          Celery for a full inventory pass later, then exact-name normalizing
+          followed by Gemini fuzzy merge (≥0.85) to create the dish SKU. That
+          path took days of integration and orchestration, not weeks of model
+          work.
+        </p>
+        <p class="text-base leading-relaxed text-[var(--color-accent)]/90">
+          The tradeoff: the fuzzy match fails open — if the model errors or
+          is unsure, it creates a new dish rather than risk a bad merge. That
+          protects the vote graph from false collisions, but it means
+          duplicate SKUs still turn up when names are ambiguous ("pad thai"
+          vs. "pad thai chicken"). Deterministic matching owns the happy
+          path; AI only bridges the messy middle.
+        </p>
+      </section>
+
+      <!-- About -->
+      <section class="py-20 border-t border-[var(--color-secondary)]/20">
+        <h2 class="text-3xl md:text-4xl font-bold text-[var(--color-accent)] mb-8">
+          About
+        </h2>
+        <p class="text-base leading-relaxed text-[var(--color-accent)]/90 mb-6">
+          I'm a full-stack engineer based in London. I've worked in green
+          energy and financial services — regulated, detail-heavy
+          environments where getting it wrong is expensive — and I now build
+          products end to end, from data model to App Store listing.
+        </p>
+        <p class="text-base leading-relaxed text-[var(--color-accent)]/90 mb-6">
+          I speak English, Japanese, and Persian, and I'm learning Italian.
+          If you're working across those markets, that tends to matter more
+          than it looks like it should.
+        </p>
+        <p class="text-base leading-relaxed text-[var(--color-accent)]/90 mb-6">
+          "Forever in transit" is about a love of travel — I'm always
+          somewhere between here and there. Outside of client work I build
+          all sorts of things for fun, lately leaning into game development;
+          I mostly just like the process of building something from scratch
+          and watching people react to it.
+        </p>
+        <p class="text-base leading-relaxed text-[var(--color-accent)]">
+          <span class="font-semibold">What I'm looking for:</span> contract or
+          permanent work with startups and small product teams, based in
+          London, remote, or hybrid — with a soft spot for stints in Europe
+          (Nice, Milan, Barcelona) and Tokyo.
+        </p>
+      </section>
+
+      <!-- Contact -->
+      <section class="py-20 border-t border-[var(--color-secondary)]/20">
+        <h2 class="text-3xl md:text-4xl font-bold text-[var(--color-accent)] mb-8">
+          Contact
+        </h2>
+        <p class="text-lg mb-4">
+          <a href="mailto:nimasoufiani@gmail.com" class="text-[var(--color-highlight)] hover:underline underline-offset-4">
+            nimasoufiani@gmail.com
+          </a>
+        </p>
+        <p class="text-base text-[var(--color-secondary)] flex gap-4">
+          <a href="https://github.com/Nimzyow" target="_blank" rel="noopener noreferrer" class="hover:text-[var(--color-highlight)] transition-colors underline underline-offset-4">
+            GitHub
+          </a>
+          <a href="https://www.linkedin.com/in/nima-soufiani-555a76198/" target="_blank" rel="noopener noreferrer" class="hover:text-[var(--color-highlight)] transition-colors underline underline-offset-4">
+            LinkedIn
+          </a>
+        </p>
+      </section>
+
+      <!-- Footer — live performance flourish -->
+      <footer class="py-12 border-t border-[var(--color-secondary)]/20 text-center">
+        <p class="text-sm text-[var(--color-secondary)]/70">
+          © {new Date().getFullYear()} Nima Soufiani ·
+          <span id="perf-flourish"> </span>
+        </p>
+      </footer>
+    </main>
+
+    <script>
+      // One quiet, real flourish: this page's own load time, measured live.
+      window.addEventListener("load", () => {
+        const nav = performance.getEntriesByType("navigation")[0] as PerformanceNavigationTiming | undefined;
+        const el = document.getElementById("perf-flourish");
+        if (nav && el) {
+          const ms = Math.round(nav.loadEventEnd - nav.startTime);
+          el.textContent = `this page loaded in ${ms}ms`;
+        }
+      });
+    </script>
   </body>
 </html>
