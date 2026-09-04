@@ -1,0 +1,44 @@
+---
+interface Props {
+  lang?: "en" | "ja";
+  title: string;
+  subtitle: string;
+  emailLabel?: string;
+  linkedInLabel?: string;
+  showCv?: boolean;
+  cvLabel?: string;
+  cvHref?: string;
+}
+
+const {
+  lang = "en",
+  title,
+  subtitle,
+  emailLabel = lang === "ja" ? "メールで連絡する" : "nimasoufiani@gmail.com",
+  linkedInLabel = "LinkedIn",
+  showCv = false,
+  cvLabel = lang === "ja" ? "職務経歴書（PDF）" : "CV (PDF)",
+  cvHref = "#",
+} = Astro.props;
+---
+
+<section class="contact-band" id="contact">
+  <div>
+    <div class="contact-title">{title}</div>
+    <div class="contact-sub">{subtitle}</div>
+  </div>
+  <div class="contact-actions">
+    <a class="btn btn-primary" href="mailto:nimasoufiani@gmail.com">{emailLabel}</a>
+    <a
+      class="btn btn-ghost"
+      href="https://www.linkedin.com/in/nima-soufiani-555a76198/"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      {linkedInLabel}
+    </a>
+    {showCv && (
+      <a class="btn btn-ghost" href={cvHref}>{cvLabel}</a>
+    )}
+  </div>
+</section>

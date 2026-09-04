@@ -1,0 +1,132 @@
+---
+interface NavItem {
+  href: string;
+  label: string;
+}
+
+interface Props {
+  lang?: "en" | "ja";
+  brandHref?: string;
+  brandLabel?: string;
+  nav?: NavItem[];
+  backLabel?: string;
+}
+
+const {
+  lang = "en",
+  brandHref = lang === "ja" ? "/ja/" : "/",
+  brandLabel = "FOREVERINTRANSIT.NET",
+  nav = lang === "ja"
+    ? [
+        { href: "#work", label: "制作物" },
+        { href: "#career", label: "経歴" },
+        { href: "#contact", label: "お問い合わせ" },
+      ]
+    : [
+        { href: "#work", label: "Work" },
+        { href: "#about", label: "About" },
+        { href: "#contact", label: "Contact" },
+      ],
+  backLabel,
+} = Astro.props;
+
+const otherLangHref = lang === "ja" ? "/" : "/ja/";
+const otherLangLabel = lang === "ja" ? "EN" : "日本語";
+const mobileBrand = brandLabel.replace(".NET", "");
+---
+
+<header class="site-header">
+  <a class="brand" href={brandHref}>
+    <span class="hidden sm:inline">{backLabel ?? brandLabel}</span>
+    <span class="sm:hidden">{backLabel ?? mobileBrand}</span>
+  </a>
+
+  <nav class="nav-desktop" aria-label="Primary">
+    {nav.map((item) => (
+      <a href={item.href}>{item.label}</a>
+    ))}
+    <span class="lang-toggle" aria-label="Language">
+      {lang === "en" ? (
+        <>
+          <span class="is-active">EN</span>
+          <a href={otherLangHref}>{otherLangLabel}</a>
+        </>
+      ) : (
+        <>
+          <a href={otherLangHref}>{otherLangLabel}</a>
+          <span class="is-active">日本語</span>
+        </>
+      )}
+    </span>
+  </nav>
+
+  <div class="header-mobile-actions">
+    <a class="lang-chip" href={otherLangHref}>{otherLangLabel}</a>
+    <button
+      class="menu-toggle"
+      type="button"
+      aria-expanded="false"
+      aria-controls="mobile-nav"
+      data-menu-toggle
+    >
+      <span></span>
+      <span></span>
+      <span class="sr-only">Menu</span>
+    </button>
+  </div>
+</header>
+
+<nav class="mobile-nav" id="mobile-nav" data-mobile-nav aria-label="Mobile">
+  {nav.map((item) => (
+    <a href={item.href}>{item.label}</a>
+  ))}
+</nav>
+
+<script>
+  const toggle = document.querySelector("[data-menu-toggle]");
+  const panel = document.querySelector("[data-mobile-nav]");
+  if (toggle && panel) {
+    toggle.addEventListener("click", () => {
+      const open = panel.classList.toggle("is-open");
+      toggle.setAttribute("aria-expanded", open ? "true" : "false");
+    });
+    panel.querySelectorAll("a").forEach((link) => {
+      link.addEventListener("click", () => {
+        panel.classList.remove("is-open");
+        toggle.setAttribute("aria-expanded", "false");
+      });
+    });
+  }
+</script>
+
+<style>
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+  }
+
+  @media (min-width: 640px) {
+    .sm\:inline {
+      display: inline;
+    }
+    .sm\:hidden {
+      display: none;
+    }
+  }
+
+  @media (max-width: 639px) {
+    .sm\:inline {
+      display: none;
+    }
+    .sm\:hidden {
+      display: inline;
+    }
+  }
+</style>

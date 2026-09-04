@@ -1,0 +1,213 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import SiteHeader from "../../components/SiteHeader.astro";
+import ProjectCard from "../../components/ProjectCard.astro";
+import ContactBand from "../../components/ContactBand.astro";
+import PhotoSlot from "../../components/PhotoSlot.astro";
+import "../../styles/globals.css";
+
+const career = [
+  {
+    dates: "2023.05 – 現在",
+    company: "Vocalink（Mastercard 傘下）",
+    blurb:
+      "ソフトウェアエンジニア。決済システムの近代化と大規模なクラウド移行にコアメンバーとして参画。自作の Python CLI により移行作業を 700 時間から 1 時間へ短縮。",
+    stack: "Python · Bash · Ansible\nAWS · Terraform\nKubernetes · Jenkins",
+    stackMobile: "Python · Ansible · AWS · Terraform · Kubernetes",
+  },
+  {
+    dates: "2020.08 – 2023.04",
+    company: "Ripple Energy",
+    blurb:
+      "フルスタックエンジニア。従業員 8 名から 35 名へ拡大する時期に参画し、REST から GraphQL への移行、TypeScript 導入、サーバーレス基盤の設計を主導。",
+    stack: "Django · GraphQL\nReact · Next.js\nAWS SAM · Cypress",
+    stackMobile: "Django · GraphQL · React · Next.js · AWS SAM",
+  },
+  {
+    dates: "2012.08 – 2020.02",
+    company: "Civil Engineers Ltd",
+    blurb:
+      "構造エンジニア。新しい技術の導入により、社内の働き方を変え生産性を大きく向上。のちに社内向けの業務アプリを開発し、エンジニアへ転身。",
+    stack: "Revit · AutoCAD\nPython · Django",
+    stackMobile: "Revit · AutoCAD · Python · Django",
+  },
+];
+
+const skills = [
+  { name: "Python", years: "5 年", level: "指導が可能", mobile: "5 年 ／ 指導が可能" },
+  { name: "TypeScript", years: "5 年", level: "指導が可能", mobile: "5 年 ／ 指導が可能" },
+  { name: "Django ／ Next.js", years: "4 年", level: "指導が可能", mobile: "4 年 ／ 指導が可能" },
+  {
+    name: "Kubernetes ／ Docker",
+    years: "4 年",
+    level: "運用・設計が可能",
+    mobile: "4 年 ／ 運用・設計",
+  },
+  {
+    name: "AWS ／ Terraform",
+    years: "4 年",
+    level: "構築からガイダンスまで可能",
+    mobile: "4 年 ／ 構築・助言",
+  },
+  {
+    name: "PostgreSQL ／ GraphQL",
+    years: "4 年",
+    level: "設計・最適化が可能",
+    mobile: "4 年 ／ 設計・最適化",
+  },
+];
+---
+
+<BaseLayout
+  lang="ja"
+  title="ニマ・ゴルザー・ソフィアニ — フルスタックエンジニア"
+  description="フルスタック・ソフトウェアエンジニア。ロンドン在住。業務委託・正社員ともに相談可。"
+  alternateHref="/"
+>
+  <SiteHeader lang="ja" />
+
+  <main>
+    <section class="hero hero-ja">
+      <img
+        class="sq hero-squirrel japan"
+        src="/squirrel_japan.png"
+        alt=""
+        aria-hidden="true"
+      />
+      <div class="hero-rule"></div>
+      <div class="hero-grid hero-grid-ja">
+        <div>
+          <div class="available">
+            <span class="available-dot" aria-hidden="true"></span>
+            <span class="available-label">業務委託・正社員ともに相談可</span>
+          </div>
+          <div class="hero-name-roman">NIMA GOLZAR-SOUFIANI</div>
+          <h1 class="hero-name-ja">ニマ・ゴルザー<br />ソフィアニ</h1>
+          <div class="tategaki-mobile-wrap">
+            <div class="tategaki-mobile" aria-hidden="true">
+              作って、届けて、また良くする。
+            </div>
+            <div>
+              <p class="hero-lede">
+                フルスタック・ソフトウェアエンジニア。エンジニア歴 10
+                年以上、直近は Python と TypeScript
+                を中心に、決済インフラから個人開発のアプリまで、設計から運用まで一貫して手がけています。
+              </p>
+              <p class="hero-meta hero-meta-ja">
+                <span class="meta-desktop">ロンドン在住 ／ 英語・日本語・ペルシャ語</span>
+                <span class="meta-mobile">ロンドン在住<br />英語・日本語・ペルシャ語</span>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="tategaki tategaki-desktop" aria-hidden="true">
+          作って、届けて、また良くする。
+        </div>
+        <PhotoSlot label="写真をドロップ" />
+      </div>
+    </section>
+
+    <section class="section-tight" id="work">
+      <div class="section-label-row-ja">
+        <h2 class="section-heading-ja">【 制作物 】</h2>
+        <span class="section-kicker">PERSONAL PROJECTS · 2</span>
+      </div>
+      <div class="project-grid">
+        <ProjectCard
+          href="/work/recommends"
+          title="Recommends"
+          subtitle="iOS ／ App Store"
+          description="「店」ではなく「一皿」を探すためのアプリ。企画・設計・開発・公開までを個人で担当し、現在も改善を継続中。"
+          stack="React Native · Django"
+          cta="詳しく見る →"
+          liveLabel="公開中"
+          media="recommends"
+        />
+        <ProjectCard
+          href="/work/olympo"
+          title="Olympo"
+          subtitle="olympogov.lu"
+          description="一般求人ではなく、企業の取締役会に特化した専門ネットワーク。人材マッチング、応募管理、CSSF コンプライアンスを一つの場所に。"
+          stack="TypeScript · AWS"
+          cta="詳しく見る →"
+          liveLabel="公開中"
+          media="olympo"
+          imageSrc="/olympo/dashboard.jpg"
+          imageAlt="Olympo"
+        />
+      </div>
+    </section>
+
+    <section class="section-tight" id="career">
+      <h2 class="section-heading-ja" style="margin-bottom: 20px">【 職務経歴 】</h2>
+      <div class="career-header">
+        <div>期間</div>
+        <div>会社・職種</div>
+        <div>主な担当</div>
+      </div>
+      {
+        career.map((row) => (
+          <div class="career-row">
+            <div class="career-dates">{row.dates}</div>
+            <div>
+              <div class="career-company">{row.company}</div>
+              <div class="career-blurb">{row.blurb}</div>
+              <div class="career-stack career-stack-mobile">{row.stackMobile}</div>
+            </div>
+            <div
+              class="career-stack career-stack-desktop"
+              set:html={row.stack.replace(/\n/g, "<br />")}
+            />
+          </div>
+        ))
+      }
+    </section>
+
+    <section class="section-split-ja">
+      <div>
+        <h2 class="section-heading-ja" style="margin-bottom: 20px">
+          【 テクニカルスキル 】
+        </h2>
+        <div class="skills-header">
+          <div>種類</div>
+          <div>使用期間</div>
+          <div>レベル</div>
+        </div>
+        {
+          skills.map((skill) => (
+            <div class="skills-row">
+              <div>{skill.name}</div>
+              <div class="years">{skill.years}</div>
+              <div class="level">{skill.level}</div>
+              <div class="mobile-meta">{skill.mobile}</div>
+            </div>
+          ))
+        }
+      </div>
+      <div>
+        <h2 class="section-heading-ja" style="margin-bottom: 20px">【 自己 PR 】</h2>
+        <p class="section-body">
+          作業効率の改善に向けて、自分から提案し手を動かすことを大切にしています。自動化ツールの内製、CI/CD
+          の標準化、サーバーレス基盤の導入など、チームの負担を減らす仕組みづくりを続けてきました。
+        </p>
+        <p class="section-body" style="margin-bottom: 22px">
+          新しい技術は必要になったその場で学びます。未経験だった Ansible
+          を独学で習得し本番導入したのが良い例です。現在は Red Hat 認定資格と
+          CKA の取得に向けて学習中。
+        </p>
+        <div class="pr-aside">
+          <img class="sq" src="/squirrel_coding.png" alt="" aria-hidden="true" />
+          <p>
+            英語・日本語・ペルシャ語で仕事ができます。海外チームとの橋渡し役を担うことも多いです。
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <ContactBand
+      lang="ja"
+      title="技術面をまかせられる人をお探しですか。"
+      subtitle="業務委託・正社員どちらでも。いただいたご連絡にはすべてお返事します。"
+    />
+  </main>
+</BaseLayout>

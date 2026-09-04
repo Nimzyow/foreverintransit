@@ -1,0 +1,197 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import SiteHeader from "../../components/SiteHeader.astro";
+import "../../styles/globals.css";
+---
+
+<BaseLayout
+  lang="en"
+  title="Recommends — Nima Golzar-Soufiani"
+  description="Find the dish, not just the restaurant. Photo-backed, dish-level recommendations — designed, built and shipped solo to the App Store."
+  alternateHref="/ja/"
+>
+  <SiteHeader
+    lang="en"
+    brandHref="/"
+    backLabel="← FOREVERINTRANSIT.NET"
+    nav={[
+      { href: "/#work", label: "Work" },
+      { href: "/#about", label: "About" },
+      { href: "/#contact", label: "Contact" },
+    ]}
+  />
+
+  <main>
+    <section class="project-hero">
+      <div class="project-kicker">PROJECT 01 · LIVE ON THE APP STORE</div>
+      <h1 class="project-page-title">Recommends</h1>
+      <p class="project-page-lede">
+        Find the dish, not just the restaurant. Photo-backed recommendations
+        from people who actually ate the thing.
+      </p>
+      <div class="meta-row">
+        <div>
+          <div class="meta-label">MY ROLE</div>
+          <div class="meta-value">
+            Solo — design, iOS,<br />backend, ship
+          </div>
+        </div>
+        <div>
+          <div class="meta-label">STACK</div>
+          <div class="meta-value">
+            React Native · Python<br />Celery · SpatiaLite
+          </div>
+        </div>
+        <div>
+          <div class="meta-label">STATUS</div>
+          <div class="meta-value">Live · App Store</div>
+        </div>
+        <div>
+          <div class="meta-label">VISIT</div>
+          <div class="meta-value">
+            <a
+              href="https://apps.apple.com/gb/app/recommends/id6740585961"
+              target="_blank"
+              rel="noopener noreferrer">App Store →</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="shot-block">
+      <div class="shot-frame" style="background:#1b1d2b;padding:40px 24px">
+        <div
+          style="display:flex;gap:20px;justify-content:center;align-items:flex-end;flex-wrap:wrap"
+        >
+          <img
+            src="/recommends/screenshot-1.webp"
+            alt="Recommends feed showing a dish recommendation"
+            style="width:min(220px,42%);border-radius:16px"
+          />
+          <img
+            src="/recommends/screenshot-4.webp"
+            alt="Recommends map view of top-rated dishes"
+            style="width:min(220px,42%);border-radius:16px"
+          />
+        </div>
+      </div>
+      <p class="shot-caption">
+        Dish-level feed and local map discovery — votes and photos attach to the
+        plate, not the venue.
+      </p>
+    </div>
+
+    <section class="story-grid">
+      <div>
+        <h2 class="section-label" style="margin-bottom: 16px">The idea</h2>
+        <p class="section-body">
+          Restaurant reviews rate the venue. Nobody rates the plate. Recommends
+          is photo-backed, dish-level recommendations from people who actually
+          ate the thing — so you arrive knowing what to order, not just where to
+          go.
+        </p>
+        <p class="section-body">
+          I designed it, built the native iOS app and the Python service behind
+          it, and shipped it through App Store review on my own.
+        </p>
+      </div>
+      <div>
+        <h2 class="section-label" style="margin-bottom: 16px">
+          What made it hard
+        </h2>
+        <div class="feature-grid">
+          <div>
+            <div class="feature-title">Canonical dish identity</div>
+            <div class="feature-body">
+              Menus use messy names. Gemini suggests dishes on upload; Celery
+              later extracts inventory; exact and fuzzy matching merges
+              duplicates into per-restaurant dish SKUs.
+            </div>
+          </div>
+          <div>
+            <div class="feature-title">Local discovery</div>
+            <div class="feature-body">
+              Nearby ranking combines distance and social signal on SpatiaLite —
+              dietary filters are matched outside the ORM under those
+              constraints.
+            </div>
+          </div>
+          <div>
+            <div class="feature-title">AI tradeoff</div>
+            <div class="feature-body">
+              Fuzzy match fails open: if the model is unsure, it creates a new
+              dish rather than risk a bad merge. Protects the vote graph;
+              duplicates still appear on ambiguous names.
+            </div>
+          </div>
+          <div>
+            <div class="feature-title">Privacy gates</div>
+            <div class="feature-body">
+              Location for digests is throttled by time and distance rather than
+              raw GPS on every ping.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="gallery">
+      <h2 class="section-label" style="margin-bottom: 18px">Inside the app</h2>
+      <div class="gallery-grid">
+        <figure style="margin:0">
+          <div class="gallery-frame" style="height:auto;padding:20px;background:#1b1d2b">
+            <img
+              src="/recommends/screenshot-2.webp"
+              alt="Recommends dish detail"
+              style="width:min(260px,70%);margin:0 auto;border-radius:14px"
+            />
+          </div>
+          <figcaption class="shot-caption">
+            Dish detail — photos and votes land on the SKU, not the post.
+          </figcaption>
+        </figure>
+        <figure style="margin:0">
+          <div class="gallery-frame" style="height:auto;padding:20px;background:#1b1d2b">
+            <img
+              src="/recommends/screenshot-5.webp"
+              alt="Recommends discovery screen"
+              style="width:min(260px,70%);margin:0 auto;border-radius:14px"
+            />
+          </div>
+          <figcaption class="shot-caption">
+            Discovery across London — real plates from people who ate them.
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <div class="contact-band" style="justify-content:flex-start;gap:16px">
+      <a
+        class="btn btn-primary"
+        href="https://apps.apple.com/gb/app/recommends/id6740585961"
+        target="_blank"
+        rel="noopener noreferrer">App Store</a
+      >
+      <a
+        class="btn btn-ghost"
+        href="https://recommends.app"
+        target="_blank"
+        rel="noopener noreferrer">recommends.app</a
+      >
+    </div>
+
+    <a class="next-link" href="/work/olympo">
+      <div>
+        <div class="next-kicker">NEXT</div>
+        <div class="next-title">Olympo</div>
+      </div>
+      <img
+        class="sq next-squirrel"
+        src="/squirrel_think.png"
+        alt=""
+        aria-hidden="true"
+      />
+    </a>
+  </main>
+</BaseLayout>

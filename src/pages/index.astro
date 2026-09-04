@@ -1,272 +1,127 @@
 ---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import SiteHeader from "../components/SiteHeader.astro";
+import ProjectCard from "../components/ProjectCard.astro";
+import ContactBand from "../components/ContactBand.astro";
+import PhotoSlot from "../components/PhotoSlot.astro";
 import "../styles/globals.css";
+
+const skills = [
+  "Python",
+  "TypeScript",
+  "Django",
+  "React · Next.js",
+  "React Native",
+  "GraphQL",
+  "Postgres",
+  "AWS",
+  "Terraform",
+  "Kubernetes",
+];
 ---
 
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Nima Soufiani — Full-Stack Engineer</title>
-    <meta
-      name="description"
-      content="Full-stack engineer in London. I design and ship products end to end — iOS, web, and the infrastructure underneath."
+<BaseLayout
+  lang="en"
+  title="Nima Golzar-Soufiani — Full Stack Engineer"
+  description="Full stack engineer in London. Ten years in — from an idea in a meeting to something running in production."
+  alternateHref="/ja/"
+>
+  <SiteHeader lang="en" />
+
+  <main>
+    <section class="hero">
+      <img
+        class="sq hero-squirrel wave"
+        src="/squirrel_wave.png"
+        alt=""
+        aria-hidden="true"
+      />
+      <div class="hero-rule"></div>
+      <div class="hero-grid">
+        <div>
+          <div class="available">
+            <span class="available-dot" aria-hidden="true"></span>
+            <span class="available-label">AVAILABLE — CONTRACT / PERMANENT</span>
+          </div>
+          <h1 class="hero-name-en">Nima<br />Golzar-Soufiani</h1>
+          <p class="hero-lede">
+            Full stack engineer, ten years in. I take things from an idea in a
+            meeting to something running in production — and then keep making it
+            better.
+          </p>
+          <p class="hero-meta">London · English, 日本語, فارسی</p>
+        </div>
+        <PhotoSlot label="Drop a photo of you" />
+      </div>
+    </section>
+
+    <section class="section" id="work">
+      <div class="section-label-row">
+        <h2 class="section-label">Two things I built</h2>
+        <span class="section-kicker">BOTH LIVE · TAP FOR THE STORY</span>
+      </div>
+      <div class="project-grid">
+        <ProjectCard
+          href="/work/recommends"
+          title="Recommends"
+          subtitle="iOS · App Store"
+          description="Dishes locals actually eat. One photo of one plate is enough to help the next person order right. I designed it, built it and shipped it on my own."
+          stack="React Native · Python · Celery"
+          cta="Read the story →"
+          liveLabel="LIVE"
+          media="recommends"
+        />
+        <ProjectCard
+          href="/work/olympo"
+          title="Olympo"
+          subtitle="olympogov.lu"
+          description="A professional network built for corporate boards rather than general careers — matching, applications and CSSF governance in one place."
+          stack="TypeScript · Postgres · AWS"
+          cta="Read the story →"
+          liveLabel="LIVE"
+          media="olympo"
+          imageSrc="/olympo/dashboard.jpg"
+          imageAlt="Olympo member dashboard"
+        />
+      </div>
+    </section>
+
+    <section class="section-split" id="about">
+      <div>
+        <h2 class="section-label" style="margin-bottom: 18px">Where I am now</h2>
+        <p class="section-body">
+          Software Engineer at Vocalink (Mastercard), modernising national
+          payments infrastructure. I built an internal Python CLI that cut a
+          migration from 700 hours to one, now used by Mastercard teams
+          globally.
+        </p>
+        <p class="section-body">
+          Before that, four years at Ripple Energy while it grew from 8 people
+          to 35. I'm looking for work where I can own the technical direction.
+        </p>
+      </div>
+      <div class="skills-with-squirrel">
+        <img
+          class="sq skills-squirrel"
+          src="/squirrel_coding.png"
+          alt=""
+          aria-hidden="true"
+        />
+        <div>
+          <h2 class="section-label" style="margin-bottom: 14px">
+            What I reach for
+          </h2>
+          <div class="tag-cloud">
+            {skills.map((skill) => <span class="tag">{skill}</span>)}
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <ContactBand
+      lang="en"
+      title="Need someone to lead the technology side?"
+      subtitle="Contract or permanent. I reply to everything."
     />
-  </head>
-  <body class="bg-[var(--color-dark)] text-[var(--color-accent)]">
-    <main class="max-w-3xl mx-auto px-6">
-
-      <!-- Hero -->
-      <section class="min-h-screen flex flex-col justify-center py-24">
-        <h1 class="text-4xl md:text-6xl font-bold text-[var(--color-accent)] mb-6">
-          Nima Soufiani
-        </h1>
-        <p class="text-xl md:text-2xl text-[var(--color-secondary)] mb-8 max-w-xl">
-          Full-stack engineer in London. I design and ship products end to
-          end — iOS, web, and the infrastructure underneath.
-        </p>
-        <p class="text-lg text-[var(--color-accent)]/80 mb-10 max-w-xl leading-relaxed">
-          Two products in production: a compliance-heavy professional network
-          for corporate boards, and an iOS app live on the App Store.
-          Previously built in green energy and financial services.
-        </p>
-        <p class="text-lg font-semibold text-[var(--color-highlight)] mb-10">
-          Available for contract and permanent roles.
-        </p>
-        <div class="flex flex-wrap gap-x-6 gap-y-2 text-[var(--color-secondary)]">
-          <a href="mailto:nimasoufiani@gmail.com" class="hover:text-[var(--color-highlight)] transition-colors underline underline-offset-4">
-            nimasoufiani@gmail.com
-          </a>
-          <a href="https://github.com/Nimzyow" target="_blank" rel="noopener noreferrer" class="hover:text-[var(--color-highlight)] transition-colors underline underline-offset-4">
-            GitHub
-          </a>
-          <a href="https://www.linkedin.com/in/nima-soufiani-555a76198/" target="_blank" rel="noopener noreferrer" class="hover:text-[var(--color-highlight)] transition-colors underline underline-offset-4">
-            LinkedIn
-          </a>
-        </div>
-      </section>
-
-      <!-- Case study — Olympo -->
-      <section class="py-20 border-t border-[var(--color-secondary)]/20">
-        <h2 class="text-3xl md:text-4xl font-bold text-[var(--color-accent)] mb-2">
-          Olympo
-        </h2>
-        <p class="text-lg text-[var(--color-highlight)] mb-1">
-          A professional network built for corporate boards, not general careers.
-        </p>
-        <p class="text-sm text-[var(--color-secondary)] mb-8">
-          Co-founded with Eleonora Labita. In production, pre-launch.
-        </p>
-
-        <h3 class="text-sm uppercase tracking-wide text-[var(--color-secondary)] mb-2">The problem</h3>
-        <p class="text-base leading-relaxed text-[var(--color-accent)]/90 mb-8">
-          Companies need qualified, trustworthy board members. Board-ready
-          professionals need a structured way to find the right seats. But
-          board appointments aren't job applications — they involve sensitive
-          credentials, regulatory obligations, and a level of trust that a
-          listings site can't carry. The product had to be built around
-          verification and governance from the first commit, not bolted on
-          later.
-        </p>
-
-        <h3 class="text-sm uppercase tracking-wide text-[var(--color-secondary)] mb-2">What that meant in practice</h3>
-        <ul class="text-base leading-relaxed text-[var(--color-accent)]/90 mb-8 space-y-4 list-disc list-outside pl-5">
-          <li>
-            <span class="font-semibold text-[var(--color-accent)]">Verification</span> runs through a
-            custom admin interface rather than an off-the-shelf KYC vendor —
-            documents move through a <span class="italic">pending → verified</span>
-            state in the database, and nothing is treated as trusted until an
-            admin has reviewed it.
-          </li>
-          <li>
-            <span class="font-semibold text-[var(--color-accent)]">Data model</span> runs on DynamoDB
-            behind a fully serverless stack (SST on AWS), so cost tracks
-            actual usage instead of idle infrastructure — a deliberate choice
-            for a pre-launch product with no users yet.
-          </li>
-          <li>
-            <span class="font-semibold text-[var(--color-accent)]">Sensitive data</span> — CVs,
-            identity documents, board credentials — lives in a private S3
-            bucket with no public access; uploads and admin downloads go
-            through short-lived presigned URLs, and everything is kept in the
-            appropriate EU region to match the compliance rules the product
-            is built around.
-          </li>
-        </ul>
-
-        <h3 class="text-sm uppercase tracking-wide text-[var(--color-secondary)] mb-2">Stack</h3>
-        <p class="text-base leading-relaxed text-[var(--color-accent)]/90 mb-8">
-          SST (Serverless Stack), Next.js, AWS — S3, DynamoDB, Cognito.
-        </p>
-
-        <!-- TODO(nima): what's actually next, and one honest "what I'd do differently" line. -->
-
-        <h3 class="text-sm uppercase tracking-wide text-[var(--color-secondary)] mb-2">Where it stands</h3>
-        <p class="text-base leading-relaxed text-[var(--color-accent)]/90">
-          Deployed to production and feature-complete for launch — no users
-          yet.
-        </p>
-      </section>
-
-      <!-- Case study — Recommends -->
-      <section class="py-20 border-t border-[var(--color-secondary)]/20">
-        <h2 class="text-3xl md:text-4xl font-bold text-[var(--color-accent)] mb-2">
-          Recommends
-        </h2>
-        <p class="text-lg text-[var(--color-highlight)] mb-1">
-          Find the dish, not just the restaurant.
-        </p>
-        <p class="text-sm text-[var(--color-secondary)] mb-8">
-          My own product. Live on the iOS App Store.
-        </p>
-
-        <h3 class="text-sm uppercase tracking-wide text-[var(--color-secondary)] mb-2">The idea</h3>
-        <p class="text-base leading-relaxed text-[var(--color-accent)]/90 mb-8">
-          Restaurant reviews rate the venue. Nobody rates the plate.
-          Recommends is photo-backed, dish-level recommendations from people
-          who actually ate the thing — so you arrive knowing what to order,
-          not just where to go.
-        </p>
-
-        <h3 class="text-sm uppercase tracking-wide text-[var(--color-secondary)] mb-2">What I built</h3>
-        <p class="text-base leading-relaxed text-[var(--color-accent)]/90 mb-4">
-          A native iOS app backed by a Python service — Celery for async
-          ingest, Redis for scheduling, SpatiaLite for geo queries — with
-          Gemini wired in for dish extraction. Two problems drove the
-          architecture:
-        </p>
-        <ul class="text-base leading-relaxed text-[var(--color-accent)]/90 mb-8 space-y-4 list-disc list-outside pl-5">
-          <li>
-            <span class="font-semibold text-[var(--color-accent)]">Canonical dish identity.</span>
-            Menus and posts use messy, inconsistent names, so the system
-            turns photos into per-restaurant dish SKUs: Gemini suggests
-            dishes on upload, Celery later extracts a full inventory, then
-            exact and fuzzy matching (≥0.85 similarity) merges duplicates so
-            votes and photos attach to the dish, not the post — entity
-            resolution plus multimodal AI, so discovery ranks real dishes
-            instead of one-off captions.
-          </li>
-          <li>
-            <span class="font-semibold text-[var(--color-accent)]">Local discovery under SpatiaLite constraints.</span>
-            Nearby ranking combines distance and social signal on SpatiaLite,
-            not PostGIS, so dietary filters can't safely ride inside the same
-            annotated geo query and are matched outside the ORM instead.
-            Location for digests is privacy-throttled by time and distance
-            gates rather than raw GPS on every ping.
-          </li>
-        </ul>
-
-        <h3 class="text-sm uppercase tracking-wide text-[var(--color-secondary)] mb-2">Where it stands</h3>
-        <p class="text-base leading-relaxed text-[var(--color-accent)]/90 mb-8">
-          Shipped through App Store review and live, with real
-          recommendations across London.
-        </p>
-
-        <div class="flex flex-wrap gap-4">
-          <a href="https://apps.apple.com/gb/app/recommends/id6740585961" target="_blank" rel="noopener noreferrer" class="text-[var(--color-secondary)] hover:text-[var(--color-highlight)] transition-colors underline underline-offset-4">
-            App Store →
-          </a>
-          <a href="https://recommends.app" target="_blank" rel="noopener noreferrer" class="text-[var(--color-secondary)] hover:text-[var(--color-highlight)] transition-colors underline underline-offset-4">
-            recommends.app →
-          </a>
-        </div>
-      </section>
-
-      <!-- How I work with AI -->
-      <section class="py-20 border-t border-[var(--color-secondary)]/20">
-        <h2 class="text-3xl md:text-4xl font-bold text-[var(--color-accent)] mb-8">
-          How I work with AI
-        </h2>
-        <p class="text-base leading-relaxed text-[var(--color-accent)]/90 mb-4">
-          I build with AI tooling heavily, which mostly means I move faster on
-          the parts that were never the interesting bit. On Recommends,
-          instead of building OCR, NER, and custom matching by hand, I wired
-          Gemini into a hybrid pipeline — fast menu suggestions on upload,
-          Celery for a full inventory pass later, then exact-name normalizing
-          followed by Gemini fuzzy merge (≥0.85) to create the dish SKU. That
-          path took days of integration and orchestration, not weeks of model
-          work.
-        </p>
-        <p class="text-base leading-relaxed text-[var(--color-accent)]/90">
-          The tradeoff: the fuzzy match fails open — if the model errors or
-          is unsure, it creates a new dish rather than risk a bad merge. That
-          protects the vote graph from false collisions, but it means
-          duplicate SKUs still turn up when names are ambiguous ("pad thai"
-          vs. "pad thai chicken"). Deterministic matching owns the happy
-          path; AI only bridges the messy middle.
-        </p>
-      </section>
-
-      <!-- About -->
-      <section class="py-20 border-t border-[var(--color-secondary)]/20">
-        <h2 class="text-3xl md:text-4xl font-bold text-[var(--color-accent)] mb-8">
-          About
-        </h2>
-        <p class="text-base leading-relaxed text-[var(--color-accent)]/90 mb-6">
-          I'm a full-stack engineer based in London. I've worked in green
-          energy and financial services — regulated, detail-heavy
-          environments where getting it wrong is expensive — and I now build
-          products end to end, from data model to App Store listing.
-        </p>
-        <p class="text-base leading-relaxed text-[var(--color-accent)]/90 mb-6">
-          I speak English, Japanese, and Persian, and I'm learning Italian.
-          If you're working across those markets, that tends to matter more
-          than it looks like it should.
-        </p>
-        <p class="text-base leading-relaxed text-[var(--color-accent)]/90 mb-6">
-          "Forever in transit" is about a love of travel — I'm always
-          somewhere between here and there. Outside of client work I build
-          all sorts of things for fun, lately leaning into game development;
-          I mostly just like the process of building something from scratch
-          and watching people react to it.
-        </p>
-        <p class="text-base leading-relaxed text-[var(--color-accent)]">
-          <span class="font-semibold">What I'm looking for:</span> contract or
-          permanent work with startups and small product teams, based in
-          London, remote, or hybrid — with a soft spot for stints in Europe
-          (Nice, Milan, Barcelona) and Tokyo.
-        </p>
-      </section>
-
-      <!-- Contact -->
-      <section class="py-20 border-t border-[var(--color-secondary)]/20">
-        <h2 class="text-3xl md:text-4xl font-bold text-[var(--color-accent)] mb-8">
-          Contact
-        </h2>
-        <p class="text-lg mb-4">
-          <a href="mailto:nimasoufiani@gmail.com" class="text-[var(--color-highlight)] hover:underline underline-offset-4">
-            nimasoufiani@gmail.com
-          </a>
-        </p>
-        <p class="text-base text-[var(--color-secondary)] flex gap-4">
-          <a href="https://github.com/Nimzyow" target="_blank" rel="noopener noreferrer" class="hover:text-[var(--color-highlight)] transition-colors underline underline-offset-4">
-            GitHub
-          </a>
-          <a href="https://www.linkedin.com/in/nima-soufiani-555a76198/" target="_blank" rel="noopener noreferrer" class="hover:text-[var(--color-highlight)] transition-colors underline underline-offset-4">
-            LinkedIn
-          </a>
-        </p>
-      </section>
-
-      <!-- Footer — live performance flourish -->
-      <footer class="py-12 border-t border-[var(--color-secondary)]/20 text-center">
-        <p class="text-sm text-[var(--color-secondary)]/70">
-          © {new Date().getFullYear()} Nima Soufiani ·
-          <span id="perf-flourish"> </span>
-        </p>
-      </footer>
-    </main>
-
-    <script>
-      // One quiet, real flourish: this page's own load time, measured live.
-      window.addEventListener("load", () => {
-        const nav = performance.getEntriesByType("navigation")[0] as PerformanceNavigationTiming | undefined;
-        const el = document.getElementById("perf-flourish");
-        if (nav && el) {
-          const ms = Math.round(nav.loadEventEnd - nav.startTime);
-          el.textContent = `this page loaded in ${ms}ms`;
-        }
-      });
-    </script>
-  </body>
-</html>
+  </main>
+</BaseLayout>

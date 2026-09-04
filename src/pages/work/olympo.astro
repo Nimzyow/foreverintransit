@@ -1,0 +1,178 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import SiteHeader from "../../components/SiteHeader.astro";
+import "../../styles/globals.css";
+---
+
+<BaseLayout
+  lang="en"
+  title="Olympo — Nima Golzar-Soufiani"
+  description="A professional network built specifically for corporate boards, not general careers."
+  alternateHref="/ja/"
+>
+  <SiteHeader
+    lang="en"
+    brandHref="/"
+    backLabel="← FOREVERINTRANSIT.NET"
+    nav={[
+      { href: "/#work", label: "Work" },
+      { href: "/#about", label: "About" },
+      { href: "/#contact", label: "Contact" },
+    ]}
+  />
+
+  <main>
+    <section class="project-hero">
+      <div class="project-kicker">PROJECT 02 · 2025 –</div>
+      <h1 class="project-page-title">Olympo</h1>
+      <p class="project-page-lede">
+        A professional network built specifically for corporate boards, not
+        general careers.
+      </p>
+      <div class="meta-row">
+        <div>
+          <div class="meta-label">MY ROLE</div>
+          <div class="meta-value">
+            Everything — product,<br />design, build, infra
+          </div>
+        </div>
+        <div>
+          <div class="meta-label">STACK</div>
+          <div class="meta-value">
+            TypeScript · Postgres<br />AWS · Terraform
+          </div>
+        </div>
+        <div>
+          <div class="meta-label">STATUS</div>
+          <div class="meta-value">Live</div>
+        </div>
+        <div>
+          <div class="meta-label">VISIT</div>
+          <div class="meta-value">
+            <a href="https://olympogov.lu" target="_blank" rel="noopener noreferrer"
+              >olympogov.lu →</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="shot-block">
+      <div class="shot-frame">
+        <img
+          src="/olympo/dashboard.jpg"
+          alt="Olympo member dashboard showing compliance readiness and matched mandates"
+        />
+      </div>
+      <p class="shot-caption">
+        The member dashboard: compliance readiness, action centre and matched
+        mandates in one view.
+      </p>
+    </div>
+
+    <section class="story-grid">
+      <div>
+        <h2 class="section-label" style="margin-bottom: 16px">Why I built it</h2>
+        <p class="section-body">
+          Companies need qualified, trustworthy board members. Board-ready
+          professionals need a structured way to find the right roles.
+        </p>
+        <p class="section-body">
+          Board appointments involve sensitive credentials, compliance and trust
+          — so this platform is designed around verification and governance, not
+          just job listings.
+        </p>
+      </div>
+      <div>
+        <h2 class="section-label" style="margin-bottom: 16px">What it does</h2>
+        <div class="feature-grid">
+          <div>
+            <div class="feature-title">Matching</div>
+            <div class="feature-body">
+              Open mandates scored against a member's expertise, sector and
+              location.
+            </div>
+          </div>
+          <div>
+            <div class="feature-title">Applications</div>
+            <div class="feature-body">
+              One place to browse, apply and track where every application
+              stands.
+            </div>
+          </div>
+          <div>
+            <div class="feature-title">CSSF compliance</div>
+            <div class="feature-body">
+              A document vault, readiness score and recurring disclosure
+              schedule.
+            </div>
+          </div>
+          <div>
+            <div class="feature-title">Governance</div>
+            <div class="feature-body">
+              Board packs, agreements and due diligence held against the entity.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="video-block">
+      <h2 class="section-label" style="margin-bottom: 18px">A quick walkthrough</h2>
+      <div class="video-placeholder">
+        <div class="play-btn" aria-hidden="true"></div>
+        <div
+          style="font:500 14px/1.5 var(--font-sans);color:rgba(233,233,237,.7);text-align:center"
+        >
+          YouTube embed goes here<br />
+          <span
+            style="font:400 12.5px/1.6 var(--font-sans);color:rgba(233,233,237,.45)"
+          >
+            Two or three minutes of you talking through it, in your own voice
+          </span>
+        </div>
+      </div>
+    </section>
+
+    <section class="gallery">
+      <h2 class="section-label" style="margin-bottom: 18px">Inside the product</h2>
+      <div class="gallery-grid">
+        <figure style="margin:0">
+          <div class="gallery-frame">
+            <img
+              src="/olympo/browse-positions.jpg"
+              alt="Browsing open board mandates on Olympo"
+            />
+          </div>
+          <figcaption class="shot-caption">
+            Browsing open mandates, filtered and scored against your profile.
+          </figcaption>
+        </figure>
+        <figure style="margin:0">
+          <div class="gallery-frame">
+            <img
+              src="/olympo/compliance-hub.jpg"
+              alt="Olympo compliance hub"
+            />
+          </div>
+          <figcaption class="shot-caption">
+            The compliance hub — board fit, KYB status and the disclosure trail.
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <a class="next-link" href="/work/recommends">
+      <div>
+        <div class="next-kicker">NEXT</div>
+        <div class="next-title">Recommends</div>
+      </div>
+      <img
+        class="sq next-squirrel"
+        src="/squirrel_think.png"
+        alt=""
+        aria-hidden="true"
+      />
+    </a>
+  </main>
+</BaseLayout>

@@ -1,0 +1,66 @@
+---
+interface Props {
+  href: string;
+  title: string;
+  subtitle: string;
+  description: string;
+  stack: string;
+  cta: string;
+  liveLabel: string;
+  media?: "squirrel" | "olympo" | "recommends";
+  squirrelSrc?: string;
+  imageSrc?: string;
+  imageAlt?: string;
+  showPlaceholderNote?: boolean;
+  placeholderNote?: string;
+}
+
+const {
+  href,
+  title,
+  subtitle,
+  description,
+  stack,
+  cta,
+  liveLabel,
+  media = "squirrel",
+  squirrelSrc = "/squirrel_scuba.png",
+  imageSrc,
+  imageAlt = "",
+  showPlaceholderNote = false,
+  placeholderNote = "SCREENSHOTS TO COME",
+} = Astro.props;
+---
+
+<a class="project-card" href={href}>
+  <div class:list={["project-media", media !== "squirrel" && "screenshot"]}>
+    {media === "squirrel" && (
+      <img class="sq project-squirrel" src={squirrelSrc} alt="" />
+    )}
+    {media === "olympo" && imageSrc && (
+      <>
+        <img src={imageSrc} alt={imageAlt} />
+        <div class="project-media-fade"></div>
+      </>
+    )}
+    {media === "recommends" && (
+      <div class="phone-shots">
+        <img src="/recommends/screenshot-1.webp" alt="" />
+        <img src="/recommends/screenshot-4.webp" alt="" />
+      </div>
+    )}
+    {showPlaceholderNote && <span class="media-note">{placeholderNote}</span>}
+    <span class="live-badge">{liveLabel}</span>
+  </div>
+  <div class="project-body">
+    <div class="project-title-row">
+      <span class="project-title">{title}</span>
+      <span class="project-sub">{subtitle}</span>
+    </div>
+    <p class="project-desc">{description}</p>
+    <div class="project-meta">
+      <span class="project-stack">{stack}</span>
+      <span class="project-cta">{cta}</span>
+    </div>
+  </div>
+</a>
