@@ -1,0 +1,155 @@
+---
+/**
+ * Sparse sakura petals — one quiet flourish.
+ * Respects prefers-reduced-motion; pauses when the tab is hidden.
+ *
+ * Petal styles are :global — JS-created nodes don't get Astro's scoped
+ * data-astro-cid attributes, so scoped rules would never match them.
+ */
+interface Props {
+  maxPetals?: number;
+  spawnEveryMs?: number;
+}
+
+const { maxPetals = 10, spawnEveryMs = 1800 } = Astro.props;
+---
+
+<div
+  class="sakura-layer"
+  aria-hidden="true"
+  data-sakura
+  data-max={maxPetals}
+  data-spawn={spawnEveryMs}
+></div>
+
+<style>
+  .sakura-layer {
+    position: fixed;
+    inset: 0;
+    z-index: 50;
+    pointer-events: none;
+    overflow: hidden;
+  }
+
+  :global(.sakura-petal) {
+    position: absolute;
+    top: -28px;
+    width: var(--petal-w, 14px);
+    height: var(--petal-h, 12px);
+    border-radius: 70% 0 70% 0;
+    background: linear-gradient(
+      135deg,
+      #ffe4ef 0%,
+      #f5b6c8 50%,
+      #e89ab0 100%
+    );
+    box-shadow: 0 0 10px rgba(255, 192, 212, 0.35);
+    opacity: 0;
+    will-change: transform, opacity;
+    animation: sakura-fall var(--dur, 12s) linear forwards;
+  }
+
+  :global(.sakura-petal::after) {
+    content: "";
+    position: absolute;
+    inset: 18% 42%;
+    background: rgba(255, 255, 255, 0.45);
+    border-radius: 50%;
+  }
+
+  @keyframes sakura-fall {
+    0% {
+      opacity: 0;
+      transform: translate3d(0, 0, 0) rotate(0deg) scale(0.85);
+    }
+    6% {
+      opacity: 0.85;
+    }
+    88% {
+      opacity: 0.75;
+    }
+    100% {
+      opacity: 0;
+      transform: translate3d(var(--drift, 80px), 110vh, 0)
+        rotate(var(--spin, 360deg)) scale(0.95);
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .sakura-layer {
+      display: none;
+    }
+  }
+</style>
+
+<script>
+  function initSakura(layer: HTMLElement) {
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+
+    const max = Number(layer.dataset.max) || 10;
+    const spawnEvery = Number(layer.dataset.spawn) || 1800;
+    let active = 0;
+    let timer: number | undefined;
+    let paused = document.hidden;
+
+    function spawn() {
+      if (paused || active >= max) return;
+
+      const petal = document.createElement("span");
+      petal.className = "sakura-petal";
+
+      const size = 10 + Math.random() * 12;
+      const left = Math.random() * 100;
+      const drift = (Math.random() - 0.4) * 180;
+      const dur = 9 + Math.random() * 7;
+      const spin = (Math.random() > 0.5 ? 1 : -1) * (240 + Math.random() * 320);
+
+      petal.style.left = `${left}%`;
+      petal.style.setProperty("--petal-w", `${size}px`);
+      petal.style.setProperty("--petal-h", `${size * 0.82}px`);
+      petal.style.setProperty("--drift", `${drift}px`);
+      petal.style.setProperty("--dur", `${dur}s`);
+      petal.style.setProperty("--spin", `${spin}deg`);
+
+      layer.appendChild(petal);
+      active += 1;
+
+      petal.addEventListener(
+        "animationend",
+        () => {
+          petal.remove();
+          active = Math.max(0, active - 1);
+        },
+        { once: true },
+      );
+    }
+
+    function schedule() {
+      const delay = spawnEvery * (0.5 + Math.random() * 1);
+      timer = window.setTimeout(() => {
+        spawn();
+        if (Math.random() < 0.25) {
+          window.setTimeout(spawn, 120 + Math.random() * 350);
+        }
+        schedule();
+      }, delay);
+    }
+
+    spawn();
+    window.setTimeout(spawn, 400);
+    window.setTimeout(spawn, 900);
+    schedule();
+
+    document.addEventListener("visibilitychange", () => {
+      paused = document.hidden;
+      if (paused && timer) {
+        clearTimeout(timer);
+        timer = undefined;
+      } else if (!paused && !timer) {
+        schedule();
+      }
+    });
+  }
+
+  document.querySelectorAll<HTMLElement>("[data-sakura]").forEach(initSakura);
+</script>

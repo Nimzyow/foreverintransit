@@ -1,9 +1,13 @@
 ---
+import SakuraFall from "../components/SakuraFall.astro";
+
 interface Props {
   title: string;
   description: string;
   lang?: "en" | "ja";
   alternateHref?: string;
+  /** Soft cherry-blossom fall. Defaults on for Japanese pages. */
+  sakura?: boolean;
 }
 
 const {
@@ -11,6 +15,7 @@ const {
   description,
   lang = "en",
   alternateHref,
+  sakura = lang === "ja",
 } = Astro.props;
 ---
 
@@ -39,6 +44,14 @@ const {
     }
   </head>
   <body class:list={["site-shell", lang === "ja" && "lang-ja"]}>
+    {
+      sakura && (
+        <SakuraFall
+          maxPetals={lang === "ja" ? 12 : 8}
+          spawnEveryMs={lang === "ja" ? 1400 : 2000}
+        />
+      )
+    }
     <slot />
   </body>
 </html>
