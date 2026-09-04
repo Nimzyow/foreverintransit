@@ -4,6 +4,7 @@ import SiteHeader from "../../components/SiteHeader.astro";
 import ProjectCard from "../../components/ProjectCard.astro";
 import ContactBand from "../../components/ContactBand.astro";
 import PhotoSlot from "../../components/PhotoSlot.astro";
+import JapanOutlines from "../../components/JapanOutlines.astro";
 import "../../styles/globals.css";
 
 const career = [
@@ -68,6 +69,7 @@ const skills = [
 
   <main>
     <section class="hero hero-ja">
+      <JapanOutlines />
       <img
         class="sq hero-squirrel japan"
         src="/squirrel_japan.png"
@@ -103,7 +105,7 @@ const skills = [
         <div class="tategaki tategaki-desktop" aria-hidden="true">
           作って、届けて、また良くする。
         </div>
-        <PhotoSlot label="写真をドロップ" />
+        <PhotoSlot src="/IMG_8965.png" alt="ニマ・ゴルザー・ソフィアニ" />
       </div>
     </section>
 

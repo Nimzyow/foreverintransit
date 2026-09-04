@@ -1,11 +1,25 @@
 ---
 interface Props {
+  src?: string;
+  alt?: string;
   label?: string;
 }
 
-const { label = "Photo coming soon" } = Astro.props;
+const {
+  src,
+  alt = "Nima Golzar-Soufiani",
+  label = "Photo coming soon",
+} = Astro.props;
 ---
 
-<div class="photo-slot" role="img" aria-label={label}>
-  <span>{label}</span>
-</div>
+{
+  src ? (
+    <div class="photo-slot has-photo">
+      <img src={src} alt={alt} width="236" height="270" />
+    </div>
+  ) : (
+    <div class="photo-slot" role="img" aria-label={label}>
+      <span>{label}</span>
+    </div>
+  )
+}

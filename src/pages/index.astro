@@ -4,6 +4,7 @@ import SiteHeader from "../components/SiteHeader.astro";
 import ProjectCard from "../components/ProjectCard.astro";
 import ContactBand from "../components/ContactBand.astro";
 import PhotoSlot from "../components/PhotoSlot.astro";
+import JapanOutlines from "../components/JapanOutlines.astro";
 import "../styles/globals.css";
 
 const skills = [
@@ -31,6 +32,7 @@ const skills = [
 
   <main>
     <section class="hero">
+      <JapanOutlines />
       <img
         class="sq hero-squirrel wave"
         src="/squirrel_wave.png"
@@ -52,7 +54,7 @@ const skills = [
           </p>
           <p class="hero-meta">London · English, 日本語, فارسی</p>
         </div>
-        <PhotoSlot label="Drop a photo of you" />
+        <PhotoSlot src="/IMG_8965.png" alt="Nima Golzar-Soufiani" />
       </div>
     </section>
 

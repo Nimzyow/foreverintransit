@@ -1,0 +1,78 @@
+---
+/**
+ * Discreet Mt Fuji line-art accent.
+ * Decorative only — aria-hidden, pointer-events none.
+ */
+---
+
+<div class="japan-outlines" aria-hidden="true">
+  <svg
+    class="outline-fuji"
+    viewBox="0 0 480 280"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      d="M8 248 C72 228 118 236 168 248 C220 232 268 220 320 242 C368 226 420 234 472 248"
+      stroke="currentColor"
+      stroke-width="1.1"
+      stroke-linecap="round"
+    />
+    <path
+      d="M42 248 L198 72 L236 48 L248 48 L286 72 L438 248"
+      stroke="currentColor"
+      stroke-width="1.25"
+      stroke-linejoin="round"
+      stroke-linecap="round"
+    />
+    <path
+      d="M214 78 L236 52 L248 52 L270 78"
+      stroke="currentColor"
+      stroke-width="1.1"
+      stroke-linejoin="round"
+      stroke-linecap="round"
+    />
+    <path
+      d="M204 92 C220 84 236 80 242 80 C248 80 262 84 276 92"
+      stroke="currentColor"
+      stroke-width="1"
+      stroke-linecap="round"
+    />
+    <path
+      d="M118 188 C168 168 220 158 242 158 C264 158 314 168 362 188"
+      stroke="currentColor"
+      stroke-width="0.9"
+      stroke-linecap="round"
+      opacity="0.7"
+    />
+  </svg>
+</div>
+
+<style>
+  .japan-outlines {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    overflow: hidden;
+    z-index: 0;
+    color: rgba(233, 233, 237, 0.11);
+  }
+
+  .outline-fuji {
+    position: absolute;
+    left: 42%;
+    bottom: -2%;
+    width: min(440px, 48vw);
+    height: auto;
+    transform: translateX(-50%);
+  }
+
+  @media (max-width: 700px) {
+    .outline-fuji {
+      left: 50%;
+      width: min(320px, 78vw);
+      bottom: -2%;
+      opacity: 0.85;
+    }
+  }
+</style>
