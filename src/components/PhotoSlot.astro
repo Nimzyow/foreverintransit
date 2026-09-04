@@ -7,7 +7,7 @@ interface Props {
 
 const {
   src,
-  alt = "Nima Golzar-Soufiani",
+  alt = "Nima Soufiani",
   label = "Photo coming soon",
 } = Astro.props;
 ---
@@ -15,7 +15,7 @@ const {
 {
   src ? (
     <div class="photo-slot has-photo">
-      <img src={src} alt={alt} width="236" height="270" />
+      <img src={src} alt={alt} width="1086" height="1448" />
     </div>
   ) : (
     <div class="photo-slot" role="img" aria-label={label}>
