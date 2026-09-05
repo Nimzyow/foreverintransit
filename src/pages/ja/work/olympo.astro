@@ -1,0 +1,174 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import SiteHeader from "../../../components/SiteHeader.astro";
+import ContentWidth from "../../../components/ContentWidth.astro";
+import "../../../styles/globals.css";
+---
+
+<BaseLayout
+  lang="ja"
+  title="Olympo — ニマ・ソフィアニ"
+  description="一般求人ではなく、企業の取締役会に特化した専門ネットワーク。"
+  alternateHref="/work/olympo"
+>
+  <SiteHeader
+    lang="ja"
+    brandHref="/ja/"
+    backLabel="← FOREVERINTRANSIT.NET"
+    otherLangHref="/work/olympo"
+    nav={[
+      { href: "/ja/#work", label: "制作物" },
+      { href: "/ja/#career", label: "経歴" },
+      { href: "/ja/#contact", label: "お問い合わせ" },
+    ]}
+  />
+
+  <main>
+    <section class="project-hero">
+      <div class="project-kicker">プロジェクト 02 · 2025 –</div>
+      <h1 class="project-page-title">Olympo</h1>
+      <p class="project-page-lede">
+        一般求人ではなく、企業の取締役会に特化した専門ネットワーク。
+      </p>
+      <div class="meta-row">
+        <div>
+          <div class="meta-label">担当</div>
+          <div class="meta-value">
+            すべて — プロダクト、<br />デザイン、実装、インフラ
+          </div>
+        </div>
+        <div>
+          <div class="meta-label">技術スタック</div>
+          <div class="meta-value">
+            TypeScript · Postgres<br />AWS · Terraform
+          </div>
+        </div>
+        <div>
+          <div class="meta-label">ステータス</div>
+          <div class="meta-value">公開中</div>
+        </div>
+        <div>
+          <div class="meta-label">リンク</div>
+          <div class="meta-value">
+            <a href="https://olympogov.lu" target="_blank" rel="noopener noreferrer"
+              >olympogov.lu →</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <ContentWidth>
+      <div class="shot-block">
+        <div class="shot-frame">
+          <img
+            src="/olympo/dashboard.jpg"
+            alt="コンプライアンス準備状況とマッチしたマンデートを示す Olympo 会員ダッシュボード"
+          />
+        </div>
+        <p class="shot-caption">
+          会員ダッシュボード。コンプライアンス準備状況、アクションセンター、マッチしたマンデートを一画面に。
+        </p>
+      </div>
+
+      <section class="story-grid">
+        <div>
+          <h2 class="section-label" style="margin-bottom: 16px">なぜ作ったか</h2>
+          <p class="section-body">
+            企業には、信頼できる適任の取締役が必要です。取締役候補の専門家には、適切な役職を見つけるための仕組みが必要です。
+          </p>
+          <p class="section-body">
+            取締役の選任には、機密性の高い経歴、コンプライアンス、信頼が伴います。そのためこのプラットフォームは、単なる求人一覧ではなく、本人確認とガバナンスを軸に設計しています。
+          </p>
+        </div>
+        <div>
+          <h2 class="section-label" style="margin-bottom: 16px">できること</h2>
+          <div class="feature-grid">
+            <div>
+              <div class="feature-title">マッチング</div>
+              <div class="feature-body">
+                公開中のマンデートを、専門性・業種・所在地に基づいてスコアリング。
+              </div>
+            </div>
+            <div>
+              <div class="feature-title">応募管理</div>
+              <div class="feature-body">
+                閲覧・応募・進捗確認をひとつの場所で。
+              </div>
+            </div>
+            <div>
+              <div class="feature-title">CSSF コンプライアンス</div>
+              <div class="feature-body">
+                書類保管庫、準備スコア、定期開示スケジュール。
+              </div>
+            </div>
+            <div>
+              <div class="feature-title">ガバナンス</div>
+              <div class="feature-body">
+                ボードパック、契約、デューデリジェンスを法人単位で管理。
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="video-block">
+        <h2 class="section-label" style="margin-bottom: 18px">短いウォークスルー</h2>
+        <div class="video-placeholder">
+          <div class="play-btn" aria-hidden="true"></div>
+          <div
+            style="font:500 14px/1.5 var(--font-sans);color:rgba(233,233,237,.7);text-align:center"
+          >
+            YouTube 埋め込み予定<br />
+            <span
+              style="font:400 12.5px/1.6 var(--font-sans);color:rgba(233,233,237,.45)"
+            >
+              2〜3 分、自分の言葉で説明する予定
+            </span>
+          </div>
+        </div>
+      </section>
+
+      <section class="gallery">
+        <h2 class="section-label" style="margin-bottom: 18px">プロダクトの中身</h2>
+        <div class="gallery-grid">
+          <figure style="margin:0">
+            <div class="gallery-frame">
+              <img
+                src="/olympo/browse-positions.jpg"
+                alt="Olympo で公開中の取締役マンデートを閲覧"
+              />
+            </div>
+            <figcaption class="shot-caption">
+              公開中のマンデートを、プロフィールに対してフィルタ・スコアリングしながら閲覧。
+            </figcaption>
+          </figure>
+          <figure style="margin:0">
+            <div class="gallery-frame">
+              <img
+                src="/olympo/compliance-hub.jpg"
+                alt="Olympo のコンプライアンスハブ"
+              />
+            </div>
+            <figcaption class="shot-caption">
+              コンプライアンスハブ — ボード適合、KYB 状況、開示の記録。
+            </figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <a class="next-link" href="/ja/work/recommends">
+        <div>
+          <div class="next-kicker">次へ</div>
+          <div class="next-title">Recommends</div>
+        </div>
+        <img
+          class="sq next-squirrel"
+          src="/squirrel_think.png"
+          alt=""
+          aria-hidden="true"
+        />
+      </a>
+    </ContentWidth>
+  </main>
+</BaseLayout>

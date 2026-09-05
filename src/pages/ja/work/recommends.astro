@@ -1,0 +1,183 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import SiteHeader from "../../../components/SiteHeader.astro";
+import ContentWidth from "../../../components/ContentWidth.astro";
+import "../../../styles/globals.css";
+---
+
+<BaseLayout
+  lang="ja"
+  title="Recommends — ニマ・ソフィアニ"
+  description="「店」ではなく「一皿」を探す。実際に食べた人による写真付きの一皿レコメンド。企画・設計・開発・App Store 公開までを個人で担当。"
+  alternateHref="/work/recommends"
+>
+  <SiteHeader
+    lang="ja"
+    brandHref="/ja/"
+    backLabel="← FOREVERINTRANSIT.NET"
+    otherLangHref="/work/recommends"
+    nav={[
+      { href: "/ja/#work", label: "制作物" },
+      { href: "/ja/#career", label: "経歴" },
+      { href: "/ja/#contact", label: "お問い合わせ" },
+    ]}
+  />
+
+  <main>
+    <section class="project-hero">
+      <div class="project-kicker">プロジェクト 01 · App Store で公開中</div>
+      <h1 class="project-page-title">Recommends</h1>
+      <p class="project-page-lede">
+        「店」ではなく「一皿」を探す。実際に食べた人による写真付きのレコメンド。
+      </p>
+      <div class="meta-row">
+        <div>
+          <div class="meta-label">担当</div>
+          <div class="meta-value">
+            個人 — デザイン、iOS、<br />バックエンド、公開
+          </div>
+        </div>
+        <div>
+          <div class="meta-label">技術スタック</div>
+          <div class="meta-value">
+            React Native · Python<br />Celery · SpatiaLite
+          </div>
+        </div>
+        <div>
+          <div class="meta-label">ステータス</div>
+          <div class="meta-value">公開中 · App Store</div>
+        </div>
+        <div>
+          <div class="meta-label">リンク</div>
+          <div class="meta-value">
+            <a
+              href="https://apps.apple.com/gb/app/recommends/id6740585961"
+              target="_blank"
+              rel="noopener noreferrer">App Store →</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <ContentWidth>
+      <div class="shot-block">
+        <div class="shot-frame" style="background:#1b1d2b;padding:40px 24px">
+          <div
+            style="display:flex;gap:20px;justify-content:center;align-items:flex-end;flex-wrap:wrap"
+          >
+            <img
+              src="/recommends/screenshot-1.webp"
+              alt="一皿のレコメンドが表示された Recommends のフィード"
+              style="width:min(220px,42%);border-radius:16px"
+            />
+            <img
+              src="/recommends/screenshot-4.webp"
+              alt="高評価の一皿を示す Recommends の地図ビュー"
+              style="width:min(220px,42%);border-radius:16px"
+            />
+          </div>
+        </div>
+        <p class="shot-caption">
+          一皿単位のフィードと地図での発見 — 投票と写真は店ではなく「その皿」に紐づく。
+        </p>
+      </div>
+
+      <section class="story-grid">
+        <div>
+          <h2 class="section-label" style="margin-bottom: 16px">コンセプト</h2>
+          <p class="section-body">
+            レストランのレビューは店を評価する。皿そのものを評価する人はほとんどいない。Recommends
+            は、実際に食べた人による写真付きの一皿レコメンド — 行き先だけでなく、何を注文すべきかも分かるようにする。
+          </p>
+          <p class="section-body">
+            デザイン、ネイティブ iOS アプリ、背後の Python
+            サービスまで自分で作り、App Store 審査も通して公開しました。
+          </p>
+        </div>
+        <div>
+          <h2 class="section-label" style="margin-bottom: 16px">
+            難しかった点
+          </h2>
+          <div class="feature-grid">
+            <div>
+              <div class="feature-title">一皿の正規化</div>
+              <div class="feature-body">
+                メニュー名はばらばら。アップロード時に Gemini
+                が候補を提案し、あとから Celery
+                が在庫を抽出。完全一致とあいまい一致で重複をまとめ、店ごとの一皿
+                SKU にする。
+              </div>
+            </div>
+            <div>
+              <div class="feature-title">ローカル発見</div>
+              <div class="feature-body">
+                近傍ランキングは SpatiaLite
+                上で距離とソーシャルシグナルを組み合わせる。食事制限フィルタは、その制約のもと
+                ORM の外で照合する。
+              </div>
+            </div>
+            <div>
+              <div class="feature-title">AI のトレードオフ</div>
+              <div class="feature-body">
+                あいまい一致は fail-open。確信がなければ無理に統合せず新しい一皿を作る。投票グラフは守れるが、曖昧な名前では重複が残る。
+              </div>
+            </div>
+            <div>
+              <div class="feature-title">プライバシー制御</div>
+              <div class="feature-body">
+                ダイジェスト用の位置情報は、毎回の生 GPS
+                ではなく、時間と距離で間引く。
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="gallery">
+        <h2 class="section-label" style="margin-bottom: 18px">アプリの中身</h2>
+        <div class="gallery-grid">
+          <figure style="margin:0">
+            <div class="gallery-frame" style="height:auto;padding:20px;background:#1b1d2b">
+              <img
+                src="/recommends/screenshot-2.webp"
+                alt="Recommends の一皿詳細"
+                style="width:min(260px,70%);margin:0 auto;border-radius:14px"
+              />
+            </div>
+            <figcaption class="shot-caption">
+              一皿詳細 — 写真と投票は投稿ではなく SKU に紐づく。
+            </figcaption>
+          </figure>
+          <figure style="margin:0">
+            <div class="gallery-frame" style="height:auto;padding:20px;background:#1b1d2b">
+              <img
+                src="/recommends/screenshot-5.webp"
+                alt="Recommends の発見画面"
+                style="width:min(260px,70%);margin:0 auto;border-radius:14px"
+              />
+            </div>
+            <figcaption class="shot-caption">
+              ロンドンでの発見 — 実際に食べた人からの本物の一皿。
+            </figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <div class="contact-band" style="justify-content:flex-start;gap:16px">
+        <a
+          class="btn btn-primary"
+          href="https://apps.apple.com/gb/app/recommends/id6740585961"
+          target="_blank"
+          rel="noopener noreferrer">App Store</a
+        >
+        <a
+          class="btn btn-ghost"
+          href="https://recommends.app"
+          target="_blank"
+          rel="noopener noreferrer">recommends.app</a
+        >
+      </div>
+    </ContentWidth>
+  </main>
+</BaseLayout>

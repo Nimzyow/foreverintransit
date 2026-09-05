@@ -10,6 +10,8 @@ interface Props {
   brandLabel?: string;
   nav?: NavItem[];
   backLabel?: string;
+  /** Override the language-toggle target (e.g. paired case-study pages). */
+  otherLangHref?: string;
 }
 
 const {
@@ -28,9 +30,9 @@ const {
         { href: "#contact", label: "Contact" },
       ],
   backLabel,
+  otherLangHref = lang === "ja" ? "/" : "/ja/",
 } = Astro.props;
 
-const otherLangHref = lang === "ja" ? "/" : "/ja/";
 const otherLangLabel = lang === "ja" ? "EN" : "日本語";
 const mobileBrand = brandLabel.replace(".NET", "");
 ---
