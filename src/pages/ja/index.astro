@@ -5,6 +5,7 @@ import ProjectCard from "../../components/ProjectCard.astro";
 import ContactBand from "../../components/ContactBand.astro";
 import PhotoSlot from "../../components/PhotoSlot.astro";
 import JapanOutlines from "../../components/JapanOutlines.astro";
+import ContentWidth from "../../components/ContentWidth.astro";
 import "../../styles/globals.css";
 
 const career = [
@@ -109,6 +110,7 @@ const skills = [
       </div>
     </section>
 
+    <ContentWidth>
     <section class="section-tight" id="work">
       <div class="section-label-row-ja">
         <h2 class="section-heading-ja">【 制作物 】</h2>
@@ -208,8 +210,9 @@ const skills = [
 
     <ContactBand
       lang="ja"
-      title="技術面をまかせられる人をお探しですか。"
+      title="シニアエンジニアをお探しですか。"
       subtitle="業務委託・正社員どちらでも。いただいたご連絡にはすべてお返事します。"
     />
+    </ContentWidth>
   </main>
 </BaseLayout>

@@ -5,6 +5,7 @@ import ProjectCard from "../components/ProjectCard.astro";
 import ContactBand from "../components/ContactBand.astro";
 import PhotoSlot from "../components/PhotoSlot.astro";
 import JapanOutlines from "../components/JapanOutlines.astro";
+import ContentWidth from "../components/ContentWidth.astro";
 import "../styles/globals.css";
 
 const skills = [
@@ -58,6 +59,7 @@ const skills = [
       </div>
     </section>
 
+    <ContentWidth>
     <section class="section" id="work">
       <div class="section-label-row">
         <h2 class="section-label">Things I built</h2>
@@ -123,8 +125,9 @@ const skills = [
 
     <ContactBand
       lang="en"
-      title="Need someone to lead the technology side?"
+      title="Need a senior engineer on the team?"
       subtitle="Contract or permanent. I reply to everything."
     />
+    </ContentWidth>
   </main>
 </BaseLayout>
