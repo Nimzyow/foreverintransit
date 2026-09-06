@@ -525,6 +525,12 @@ body.lang-ja .section-body {
   gap: 26px;
 }
 
+/* One card for now — keep card width, center in the row */
+.project-grid:has(> :only-child) {
+  grid-template-columns: minmax(0, calc((100% - 26px) / 2));
+  justify-content: center;
+}
+
 .project-card {
   display: block;
   text-decoration: none;
@@ -1229,6 +1235,10 @@ body.lang-ja .btn {
   .project-grid {
     grid-template-columns: 1fr;
     gap: 18px;
+  }
+
+  .project-grid:has(> :only-child) {
+    grid-template-columns: 1fr;
   }
 
   .project-media {
